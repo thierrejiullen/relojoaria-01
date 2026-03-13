@@ -7,18 +7,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0c0b09;--surface:#161410;--surface2:#1e1c18;--surface3:#252219;--gold:#c9a96e;--gold-light:#e8d5a8;--gold-dim:rgba(201,169,110,.35);--cream:#f0e8d8;--muted:#6b6158;--border:rgba(201,169,110,.12);--border2:rgba(201,169,110,.22);--green:#3db87a}
+:root{--bg:#0c0b09;--surface:#161410;--surface2:#1e1c18;--gold:#c9a96e;--gold-light:#e8d5a8;--gold-dim:rgba(201,169,110,.35);--cream:#f0e8d8;--muted:#6b6158;--border:rgba(201,169,110,.12);--border2:rgba(201,169,110,.22);--green:#3db87a}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden}
-
-/* HERO */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 60%,rgba(201,169,110,.07) 0%,transparent 70%);pointer-events:none}
 .hero-eyebrow{font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;opacity:0;animation:fadeUp .8s ease .2s forwards}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,7rem);font-weight:300;line-height:1.05;opacity:0;animation:fadeUp .9s ease .4s forwards}
 .hero-title em{font-style:italic;color:var(--gold-light)}
-.hero-sub{font-size:15px;color:var(--muted);max-width:520px;margin:1.5rem auto 3rem;opacity:0;animation:fadeUp .9s ease .6s forwards}
+.hero-sub{font-size:15px;color:var(--muted);max-width:540px;margin:1.5rem auto 3rem;opacity:0;animation:fadeUp .9s ease .6s forwards}
 .hero-rule{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 3rem;opacity:0;animation:fadeUp .9s ease .8s forwards}
 .hero-cats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:720px;opacity:0;animation:fadeUp .9s ease 1s forwards}
 .hero-cat-pill{padding:8px 18px;border:1px solid var(--border2);border-radius:100px;font-size:12px;letter-spacing:.05em;color:var(--gold-light);background:rgba(201,169,110,.06);cursor:pointer;transition:all .25s;text-decoration:none}
@@ -26,8 +24,6 @@ body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;fo
 .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:fadeUp 1s ease 1.4s forwards}
 .scroll-hint span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold-dim),transparent);animation:scrollPulse 2s ease-in-out 2s infinite}
-
-/* TOP NAV */
 .top-nav{display:flex;align-items:center;background:rgba(12,11,9,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200}
 .top-nav-tabs{display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;flex:1}
 .top-nav-tabs::-webkit-scrollbar{display:none}
@@ -35,13 +31,8 @@ body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;fo
 .nav-btn:hover{color:var(--gold-light)}
 .nav-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
 .nav-tools{display:flex;gap:6px;padding:0 1rem;border-left:1px solid var(--border);flex-shrink:0}
-.tool-btn{padding:7px 13px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--border2);border-radius:100px;color:var(--gold-light);background:none;cursor:pointer;transition:all .2s;white-space:nowrap}
+.tool-btn{padding:7px 12px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--border2);border-radius:100px;color:var(--gold-light);background:none;cursor:pointer;transition:all .2s;white-space:nowrap}
 .tool-btn:hover,.tool-btn.active{background:rgba(201,169,110,.12);border-color:var(--gold);color:var(--gold)}
-
-/* MAIN */
-.main-wrap{max-width:1200px;margin:0 auto;padding:4rem 1.5rem 6rem}
-
-/* SEARCH BAR */
 .search-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:.85rem 1.5rem;display:none;gap:1rem;align-items:center;flex-wrap:wrap}
 .search-bar.visible{display:flex}
 .search-input-wrap{position:relative;flex:1;min-width:220px}
@@ -54,8 +45,7 @@ body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;fo
 .filter-chip:hover{border-color:var(--gold-dim);color:var(--gold-light)}
 .filter-chip.active{border-color:var(--gold);color:var(--gold);background:rgba(201,169,110,.1)}
 .search-count{font-size:11px;color:var(--muted);letter-spacing:.06em}
-
-/* SECTION */
+.main-wrap{max-width:1200px;margin:0 auto;padding:4rem 1.5rem 6rem}
 .cat-section{display:none}
 .cat-section.active{display:block}
 .section-header{display:grid;grid-template-columns:1fr 340px;gap:4rem;align-items:start;margin-bottom:3.5rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
@@ -66,8 +56,6 @@ body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;fo
 .section-stats{display:flex;gap:1.5rem;flex-wrap:wrap}
 .stat-val{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);line-height:1}
 .stat-lbl{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
-
-/* PERSONA */
 .persona-card{background:var(--surface);border:1px solid var(--border2);border-radius:16px;padding:1.75rem;position:relative;overflow:hidden}
 .persona-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold))}
 .persona-label{font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
@@ -83,61 +71,61 @@ body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;fo
 .persona-tag{font-size:10px;padding:3px 9px;border-radius:100px;border:1px solid var(--border2);color:var(--gold-light);background:rgba(201,169,110,.06)}
 .persona-tag.motivation{border-color:rgba(201,169,110,.3);background:rgba(201,169,110,.1);color:var(--gold)}
 
-/* BRANDS */
+/* ── BRAND CARDS (sem foto) ── */
 .brands-section-title{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
-.brands-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.5px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.brand-card{background:var(--surface);transition:background .2s;cursor:pointer;position:relative}
-.brand-card:hover{background:var(--surface2)}
+.brands-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:1.5rem}
+.brand-card{background:var(--surface);position:relative;display:flex;flex-direction:column}
 .brand-card.hidden{display:none}
-.brand-img-wrap{position:relative;height:190px;overflow:hidden;background:var(--surface2)}
-.brand-img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;filter:brightness(.85) saturate(.9)}
-.brand-card:hover .brand-img{transform:scale(1.05);filter:brightness(.95) saturate(1)}
-.brand-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,11,9,.85) 0%,rgba(12,11,9,.1) 60%,transparent 100%)}
-.brand-badges{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:4px;align-items:flex-end}
-.badge{font-size:9px;letter-spacing:.08em;padding:3px 7px;border-radius:100px;text-transform:uppercase;font-weight:500}
-.badge-fb{background:rgba(24,95,165,.85);color:#90c8ff}
-.badge-vin{background:rgba(133,79,11,.85);color:#f9cb42}
-.badge-hot{background:rgba(201,169,110,.85);color:#0c0b09}
-.brand-body{padding:1rem 1rem 1.1rem}
-.brand-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--cream);margin-bottom:.2rem}
+.brand-card-top{padding:1.25rem 1.25rem .9rem;flex:1}
+.brand-badges{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:.85rem}
+.badge{font-size:9px;letter-spacing:.08em;padding:3px 8px;border-radius:100px;text-transform:uppercase;font-weight:500}
+.badge-fb{background:rgba(24,95,165,.25);color:#90c8ff;border:1px solid rgba(24,95,165,.4)}
+.badge-vin{background:rgba(133,79,11,.25);color:#f9cb42;border:1px solid rgba(133,79,11,.4)}
+.badge-hot{background:rgba(201,169,110,.2);color:var(--gold);border:1px solid rgba(201,169,110,.4)}
+.brand-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--cream);margin-bottom:.15rem;line-height:1.2}
 .brand-origin{font-size:10px;color:var(--muted);margin-bottom:.6rem}
-.brand-models{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:.7rem}
-.model-tag{font-size:10px;color:var(--muted);padding:2px 7px;border:1px solid rgba(107,97,88,.3);border-radius:100px}
-.brand-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:.65rem}
-.brand-ticket{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--gold)}
-.no-results{padding:3rem;text-align:center;color:var(--muted);font-size:14px;display:none}
-.no-results.visible{display:block}
+.brand-url-link{display:inline-flex;align-items:center;gap:4px;font-size:10px;letter-spacing:.04em;color:var(--gold-dim);text-decoration:none;transition:color .2s;margin-bottom:.8rem;border-bottom:1px solid transparent}
+.brand-url-link:hover{color:var(--gold);border-bottom-color:var(--gold-dim)}
+.brand-url-link::before{content:'↗';font-size:10px}
+.brand-models{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:.9rem}
+.model-tag{font-size:10px;color:var(--muted);padding:2px 8px;border:1px solid rgba(107,97,88,.3);border-radius:100px;white-space:nowrap}
+.brand-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding:.75rem 1.25rem}
+.brand-ticket{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold)}
+.brand-copies-btn{display:inline-flex;align-items:center;gap:5px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border:1px solid var(--border2);border-radius:100px;color:var(--muted);background:none;cursor:pointer;transition:all .2s}
+.brand-copies-btn:hover{border-color:var(--gold);color:var(--gold)}
+.brand-copies-btn.open{border-color:var(--gold);color:var(--gold);background:rgba(201,169,110,.08)}
 
-/* FB BOX + COPY BUTTON */
-.fb-box{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-top:1.5rem}
-.fb-box-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem}
-.fb-box-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+/* Brand copies panel */
+.brand-copies-panel{display:none;border-top:1px solid var(--border);background:var(--surface2);padding:1.1rem 1.25rem}
+.brand-copies-panel.open{display:block}
+.bcp-tabs{display:flex;gap:5px;margin-bottom:.85rem;flex-wrap:wrap}
+.bcp-tab{font-size:10px;padding:4px 10px;border:1px solid var(--border2);border-radius:100px;color:var(--muted);background:none;cursor:pointer;transition:all .2s}
+.bcp-tab.active{border-color:var(--gold);color:var(--gold);background:rgba(201,169,110,.08)}
+.bcp-text{font-size:12px;color:var(--cream);line-height:1.75;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.85rem 1rem;margin-bottom:.7rem;white-space:pre-wrap}
+.bcp-actions{display:flex;gap:.6rem;align-items:center}
 .copy-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border:1px solid var(--border2);border-radius:100px;font-size:11px;color:var(--muted);background:none;cursor:pointer;transition:all .2s}
 .copy-btn:hover{border-color:var(--gold);color:var(--gold)}
 .copy-btn.copied{border-color:var(--green);color:var(--green)}
+.wa-send-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border:1px solid rgba(37,211,102,.35);border-radius:100px;font-size:11px;color:#25d366;background:rgba(37,211,102,.07);cursor:pointer;transition:all .2s;text-decoration:none}
+.wa-send-btn:hover{background:rgba(37,211,102,.15)}
+
+.no-results{padding:3rem;text-align:center;color:var(--muted);font-size:14px;display:none}
+.no-results.visible{display:block}
+
+/* FB BOX */
+.fb-box{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-top:0}
+.fb-box-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem}
+.fb-box-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .fb-interests-list{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:.85rem}
-.fb-interest-chip{font-size:11px;padding:4px 10px;border-radius:100px;border:1px solid var(--border2);color:var(--gold-light);background:rgba(201,169,110,.06);user-select:all;cursor:text}
+.fb-interest-chip{font-size:11px;padding:4px 10px;border-radius:100px;border:1px solid var(--border2);color:var(--gold-light);background:rgba(201,169,110,.06);user-select:all}
 .fb-behaviors-row{font-size:11px;color:var(--muted);line-height:1.7}
 .fb-behaviors-row strong{color:var(--gold-light)}
-
-/* WHATSAPP COPY GENERATOR */
-.wa-generator{background:var(--surface);border:1px solid var(--border2);border-radius:12px;margin-top:1.25rem;overflow:hidden}
-.wa-generator-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:var(--surface2);border-bottom:1px solid var(--border);cursor:pointer}
-.wa-generator-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.5rem}
-.wa-generator-toggle{font-size:11px;color:var(--muted)}
-.wa-generator-body{padding:1.25rem;display:none}
-.wa-generator-body.open{display:block}
-.wa-copy-selector{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem}
-.wa-copy-pill{padding:6px 14px;border:1px solid var(--border2);border-radius:100px;font-size:11px;color:var(--muted);background:none;cursor:pointer;transition:all .2s}
-.wa-copy-pill.active{border-color:var(--gold);color:var(--gold);background:rgba(201,169,110,.1)}
-.wa-copy-text{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1rem 1.25rem;font-size:13px;color:var(--cream);line-height:1.75;white-space:pre-wrap;min-height:80px;margin-bottom:.85rem}
-.wa-copy-actions{display:flex;gap:.75rem;align-items:center}
-.wa-send-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid rgba(37,211,102,.4);border-radius:100px;font-size:12px;color:#25d366;background:rgba(37,211,102,.08);cursor:pointer;transition:all .2s;text-decoration:none}
-.wa-send-btn:hover{background:rgba(37,211,102,.16)}
 
 /* TOOL PANELS */
 .tool-panel{display:none;padding:3rem 0}
 .tool-panel.active{display:block}
+.search-panel{display:none;padding:3rem 0}
+.search-panel.active{display:block}
 .tool-panel-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;margin-bottom:.5rem}
 .tool-panel-title em{font-style:italic;color:var(--gold-light)}
 .tool-panel-sub{font-size:14px;color:var(--muted);margin-bottom:2.5rem}
@@ -187,32 +175,18 @@ body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;fo
 .compare-tag{font-size:10px;padding:2px 7px;border-radius:100px;border:1px solid var(--border2);color:var(--gold-light)}
 .vs-divider{display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--muted);padding-top:60px}
 
-/* SEARCH PANEL */
-.search-panel{display:none;padding:3rem 0}
-.search-panel.active{display:block}
+/* GLOBAL SEARCH */
 .search-hero-input{width:100%;background:var(--surface);border:1px solid var(--border2);border-radius:12px;padding:1rem 1.25rem 1rem 3rem;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--cream);outline:none;transition:border-color .2s;margin-bottom:2rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%236b6158' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:1rem center}
 .search-hero-input:focus{border-color:var(--gold)}
-.search-result-item{display:flex;gap:1.5rem;align-items:center;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:.75rem;cursor:pointer;transition:all .2s}
+.search-result-item{display:flex;gap:1.25rem;align-items:center;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:.75rem;cursor:pointer;transition:all .2s}
 .search-result-item:hover{border-color:var(--border2);background:var(--surface2)}
-.search-result-img{width:60px;height:60px;border-radius:8px;object-fit:cover;flex-shrink:0;filter:brightness(.85)}
-.search-result-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream);margin-bottom:2px}
-.search-result-cat{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.search-result-icon{width:44px;height:44px;border-radius:8px;background:var(--surface2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);flex-shrink:0}
+.search-result-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--cream);margin-bottom:2px}
+.search-result-cat{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
 .search-result-models{font-size:11px;color:var(--muted)}
 .search-result-ticket{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold);flex-shrink:0}
 .search-empty{text-align:center;padding:4rem 2rem;color:var(--muted);font-size:14px}
 .search-count{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
-
-/* TOAST */
-.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(61,184,122,.15);border:1px solid rgba(61,184,122,.4);color:var(--green);padding:.6rem 1.25rem;border-radius:100px;font-size:12px;letter-spacing:.08em;opacity:0;transition:all .3s;z-index:9999;pointer-events:none}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
-/* FOOTER */
-footer{border-top:1px solid var(--border);padding:3rem 1.5rem;text-align:center}
-footer p{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-footer em{font-style:normal;color:var(--gold)}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
 
 /* PLANNER */
 .planner-grid{display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:start}
@@ -229,20 +203,18 @@ footer em{font-style:normal;color:var(--gold)}
 .planner-select option{background:#1e1c18}
 .planner-checkbox-row{display:flex;align-items:center;gap:.75rem;padding:.6rem 0;border-bottom:1px solid rgba(201,169,110,.06);cursor:pointer}
 .planner-checkbox-row:last-child{border-bottom:none}
-.planner-checkbox{width:16px;height:16px;border:1.5px solid var(--border2);border-radius:4px;background:none;cursor:pointer;flex-shrink:0;position:relative;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.planner-checkbox{width:16px;height:16px;border:1.5px solid var(--border2);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
 .planner-checkbox.checked{background:var(--gold);border-color:var(--gold)}
 .planner-checkbox.checked::after{content:'✓';font-size:10px;color:#0c0b09;font-weight:700}
 .planner-checkbox-info{flex:1}
 .planner-checkbox-name{font-size:13px;color:var(--cream)}
 .planner-checkbox-sub{font-size:10px;color:var(--muted)}
-.planner-checkbox-prio{font-size:10px;padding:2px 7px;border-radius:100px}
-/* SUMMARY CARD */
 .planner-summary-card{background:var(--surface);border:1px solid var(--border2);border-radius:16px;overflow:hidden;position:sticky;top:80px}
 .planner-summary-title{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);padding:1.25rem 1.5rem;background:var(--surface2);border-bottom:1px solid var(--border)}
 .planner-kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-bottom:1px solid var(--border)}
 .planner-kpi{padding:1.1rem 1.25rem;background:var(--surface)}
 .planner-kpi-val{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);line-height:1}
-.planner-kpi-lbl{font-size:10px;color:var(--muted);margin-top:4px;letter-spacing:.05em}
+.planner-kpi-lbl{font-size:10px;color:var(--muted);margin-top:4px}
 .planner-summary-block{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border)}
 .planner-summary-block:last-child{border-bottom:none}
 .planner-summary-section-title{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem}
@@ -251,19 +223,26 @@ footer em{font-style:normal;color:var(--gold)}
 .planner-est-row span:last-child{color:var(--gold-light);font-weight:500}
 .planner-est-note{font-size:10px;color:var(--muted);margin-top:.6rem;line-height:1.5;font-style:italic}
 
-@media(max-width:900px){.planner-grid{grid-template-columns:1fr}}
+/* TOAST */
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(61,184,122,.15);border:1px solid rgba(61,184,122,.4);color:var(--green);padding:.6rem 1.25rem;border-radius:100px;font-size:12px;letter-spacing:.08em;opacity:0;transition:all .3s;z-index:9999;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+footer{border-top:1px solid var(--border);padding:3rem 1.5rem;text-align:center}
+footer p{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+footer em{font-style:normal;color:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
+@media(max-width:900px){.planner-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.section-header,.comparator-grid,.compare-panel-grid{grid-template-columns:1fr;gap:2rem}.vs-divider{display:none}.nav-tools{padding:0 .5rem}.tool-btn{padding:5px 8px;font-size:9px}}
 </style>
 </head>
 <body>
-
 <div class="toast" id="toast">✓ Copiado!</div>
 
-<!-- HERO -->
 <section class="hero">
   <p class="hero-eyebrow">Guia Estratégico de Mercado</p>
   <h1 class="hero-title">Relojoaria<br><em>Vintage</em></h1>
-  <p class="hero-sub">Categorias · Públicos · Marcas · Interesses FB Ads · Copies WhatsApp</p>
+  <p class="hero-sub">Categorias · Públicos · Marcas com sites oficiais · Copies por marca · FB Ads</p>
   <div class="hero-rule"></div>
   <div class="hero-cats" id="hero-cats"></div>
   <div class="scroll-hint"><span>Explorar</span><div class="scroll-line"></div></div>
@@ -293,24 +272,19 @@ footer em{font-style:normal;color:var(--gold)}
   <span class="search-count" id="search-info"></span>
 </div>
 
-<div class="main-wrap" id="main-wrap">
+<div class="main-wrap">
+  <div id="catalog-view"><div id="main-content"></div></div>
 
-  <div id="catalog-view">
-    <div id="main-content"></div>
-  </div>
-
-  <!-- SEARCH -->
   <div class="search-panel" id="search-panel">
     <h2 class="tool-panel-title">Busca <em>Global</em></h2>
     <p class="tool-panel-sub">Pesquise qualquer marca ou modelo em todas as 9 categorias.</p>
     <input class="search-hero-input" id="global-search-input" type="text" placeholder="Ex: Omega, Submariner, Tissot PRX, Casio G-Shock..." oninput="globalSearch()">
-    <div id="global-results"><div class="search-empty">Digite o nome de uma marca ou modelo para buscar.</div></div>
+    <div id="global-results"><div class="search-empty">Digite o nome de uma marca ou modelo.</div></div>
   </div>
 
-  <!-- FB ADS TABLE -->
   <div class="tool-panel" id="fbtable-panel">
     <h2 class="tool-panel-title">Tabela <em>FB Ads</em></h2>
-    <p class="tool-panel-sub">Interesses e comportamentos prontos para copiar no Gerenciador de Anúncios. Clique em "Copiar" para levar direto ao Facebook.</p>
+    <p class="tool-panel-sub">Interesses e comportamentos prontos para copiar no Gerenciador de Anúncios.</p>
     <div class="ticket-filters">
       <span class="ticket-filter-label">Filtrar:</span>
       <button class="ticket-chip active" onclick="filterFbTable(this,'all')">Todos</button>
@@ -320,27 +294,18 @@ footer em{font-style:normal;color:var(--gold)}
     </div>
     <div class="fb-table-wrap">
       <table class="fb-table">
-        <thead><tr>
-          <th>Categoria</th><th>Ticket</th><th>Interesses para FB Ads</th><th>Comportamentos</th><th>Prioridade</th>
-        </tr></thead>
+        <thead><tr><th>Categoria</th><th>Ticket</th><th>Interesses FB Ads</th><th>Comportamentos</th><th>Prioridade</th></tr></thead>
         <tbody id="fb-table-body"></tbody>
       </table>
     </div>
   </div>
 
-  <!-- COMPARADOR -->
   <div class="tool-panel" id="compare-panel">
     <h2 class="tool-panel-title">Comparador de <em>Públicos</em></h2>
-    <p class="tool-panel-sub">Selecione dois públicos e compare persona, ticket, interesses e motivações lado a lado.</p>
+    <p class="tool-panel-sub">Selecione dois públicos e compare persona, ticket, interesses e motivações.</p>
     <div class="comparator-grid">
-      <div class="comparator-select-wrap">
-        <div class="comparator-select-label">Público A</div>
-        <select class="comparator-select" id="compare-a" onchange="updateComparator()"></select>
-      </div>
-      <div class="comparator-select-wrap">
-        <div class="comparator-select-label">Público B</div>
-        <select class="comparator-select" id="compare-b" onchange="updateComparator()"></select>
-      </div>
+      <div class="comparator-select-wrap"><div class="comparator-select-label">Público A</div><select class="comparator-select" id="compare-a" onchange="updateComparator()"></select></div>
+      <div class="comparator-select-wrap"><div class="comparator-select-label">Público B</div><select class="comparator-select" id="compare-b" onchange="updateComparator()"></select></div>
     </div>
     <div class="compare-panel-grid">
       <div class="compare-col" id="compare-col-a"></div>
@@ -349,433 +314,579 @@ footer em{font-style:normal;color:var(--gold)}
     </div>
   </div>
 
-  <!-- PLANNER -->
   <div class="tool-panel" id="planner-panel">
     <h2 class="tool-panel-title">Planner de <em>Campanha</em></h2>
-    <p class="tool-panel-sub">Monte seu plano de mídia, calcule o orçamento ideal e exporte os interesses em CSV.</p>
-
+    <p class="tool-panel-sub">Monte seu plano de mídia, calcule orçamento e exporte interesses em CSV.</p>
     <div class="planner-grid">
-      <!-- LEFT: Campaign builder -->
-      <div class="planner-builder">
+      <div>
         <div class="planner-block">
-          <div class="planner-block-title">⚙️ &nbsp; Configuração da Campanha</div>
-          <div class="planner-row">
-            <label class="planner-label">Orçamento diário total (R$)</label>
-            <div class="planner-slider-wrap">
-              <input type="range" class="planner-range" id="budget-range" min="30" max="500" step="10" value="150" oninput="updatePlanner()">
-              <span class="planner-range-val" id="budget-val">R$ 150/dia</span>
-            </div>
-          </div>
-          <div class="planner-row">
-            <label class="planner-label">Duração do teste (dias)</label>
-            <div class="planner-slider-wrap">
-              <input type="range" class="planner-range" id="days-range" min="7" max="30" step="1" value="14" oninput="updatePlanner()">
-              <span class="planner-range-val" id="days-val">14 dias</span>
-            </div>
-          </div>
-          <div class="planner-row">
-            <label class="planner-label">Públicos ativos simultâneos</label>
-            <div class="planner-slider-wrap">
-              <input type="range" class="planner-range" id="audiences-range" min="1" max="5" step="1" value="2" oninput="updatePlanner()">
-              <span class="planner-range-val" id="audiences-val">2 públicos</span>
-            </div>
-          </div>
-          <div class="planner-row">
-            <label class="planner-label">Objetivo da campanha</label>
-            <select class="planner-select" id="objective-sel" onchange="updatePlanner()">
-              <option value="messages">💬 Mensagens (WhatsApp)</option>
-              <option value="traffic">🔗 Tráfego (Site / Link)</option>
-              <option value="leads">📋 Geração de Leads</option>
-              <option value="awareness">📣 Reconhecimento de Marca</option>
-            </select>
-          </div>
+          <div class="planner-block-title">⚙️ &nbsp; Configuração</div>
+          <div class="planner-row"><label class="planner-label">Orçamento diário total (R$)</label><div class="planner-slider-wrap"><input type="range" class="planner-range" id="budget-range" min="30" max="500" step="10" value="150" oninput="updatePlanner()"><span class="planner-range-val" id="budget-val">R$ 150/dia</span></div></div>
+          <div class="planner-row"><label class="planner-label">Duração do teste (dias)</label><div class="planner-slider-wrap"><input type="range" class="planner-range" id="days-range" min="7" max="30" step="1" value="14" oninput="updatePlanner()"><span class="planner-range-val" id="days-val">14 dias</span></div></div>
+          <div class="planner-row"><label class="planner-label">Públicos ativos simultâneos</label><div class="planner-slider-wrap"><input type="range" class="planner-range" id="audiences-range" min="1" max="5" step="1" value="2" oninput="updatePlanner()"><span class="planner-range-val" id="audiences-val">2 públicos</span></div></div>
+          <div class="planner-row"><label class="planner-label">Objetivo da campanha</label><select class="planner-select" id="objective-sel" onchange="updatePlanner()"><option value="messages">💬 Mensagens (WhatsApp)</option><option value="traffic">🔗 Tráfego</option><option value="leads">📋 Geração de Leads</option><option value="awareness">📣 Reconhecimento</option></select></div>
         </div>
-
-        <div class="planner-block" id="planner-cat-selector">
-          <div class="planner-block-title">🎯 &nbsp; Selecionar Públicos</div>
-          <p style="font-size:12px;color:var(--muted);margin-bottom:1rem">Marque os públicos que quer incluir no plano:</p>
-          <div id="planner-checkboxes"></div>
-        </div>
-
-        <div class="planner-block">
-          <div class="planner-block-title">📤 &nbsp; Exportar Interesses</div>
-          <p style="font-size:12px;color:var(--muted);margin-bottom:1rem">Baixe os interesses dos públicos selecionados para importar no Gerenciador de Anúncios.</p>
-          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
-            <button class="copy-btn" style="font-size:12px;padding:8px 16px" onclick="exportCSV()">⬇️ Exportar CSV</button>
-            <button class="copy-btn" style="font-size:12px;padding:8px 16px" onclick="copyAllInterests()">📋 Copiar todos os interesses</button>
-          </div>
-        </div>
+        <div class="planner-block"><div class="planner-block-title">🎯 &nbsp; Públicos</div><div id="planner-checkboxes"></div></div>
+        <div class="planner-block"><div class="planner-block-title">📤 &nbsp; Exportar</div><div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.5rem"><button class="copy-btn" style="font-size:12px;padding:8px 16px" onclick="exportCSV()">⬇️ Exportar CSV</button><button class="copy-btn" style="font-size:12px;padding:8px 16px" onclick="copyAllInterests()">📋 Copiar todos interesses</button></div></div>
       </div>
-
-      <!-- RIGHT: Summary -->
-      <div class="planner-summary">
+      <div>
         <div class="planner-summary-card">
           <div class="planner-summary-title">Resumo do Plano</div>
-
-          <div class="planner-kpi-grid" id="planner-kpis">
+          <div class="planner-kpi-grid">
             <div class="planner-kpi"><div class="planner-kpi-val" id="kpi-total">R$ 2.100</div><div class="planner-kpi-lbl">Investimento total</div></div>
             <div class="planner-kpi"><div class="planner-kpi-val" id="kpi-per-pub">R$ 75/dia</div><div class="planner-kpi-lbl">Por público/dia</div></div>
             <div class="planner-kpi"><div class="planner-kpi-val" id="kpi-days">14 dias</div><div class="planner-kpi-lbl">Duração</div></div>
             <div class="planner-kpi"><div class="planner-kpi-val" id="kpi-pubs">2</div><div class="planner-kpi-lbl">Públicos ativos</div></div>
           </div>
-
-          <div class="planner-summary-block">
-            <div class="planner-summary-section-title">Estimativa de alcance</div>
-            <div class="planner-est-row"><span>Impressões estimadas</span><span id="est-impressions">~105.000</span></div>
-            <div class="planner-est-row"><span>Cliques estimados</span><span id="est-clicks">~2.100</span></div>
-            <div class="planner-est-row"><span>Conversas WhatsApp</span><span id="est-convs">~63–126</span></div>
-            <div class="planner-est-note">* Estimativas baseadas em CPM e CTR médios de anúncios no Brasil para o nicho de luxo.</div>
-          </div>
-
-          <div class="planner-summary-block" id="planner-strategy-box">
-            <div class="planner-summary-section-title">Estratégia recomendada</div>
-            <div id="planner-strategy-text" style="font-size:12px;color:var(--muted);line-height:1.75"></div>
-          </div>
-
-          <div class="planner-summary-block">
-            <div class="planner-summary-section-title">Público selecionados</div>
-            <div id="planner-selected-list" style="font-size:12px;color:var(--muted)"></div>
-          </div>
+          <div class="planner-summary-block"><div class="planner-summary-section-title">Estimativa de alcance</div><div class="planner-est-row"><span>Impressões estimadas</span><span id="est-impressions">~105.000</span></div><div class="planner-est-row"><span>Cliques estimados</span><span id="est-clicks">~2.100</span></div><div class="planner-est-row"><span>Conversas WhatsApp</span><span id="est-convs">~63–126</span></div><div class="planner-est-note">* Estimativas baseadas em CPM e CTR médios de anúncios no Brasil para o nicho de luxo.</div></div>
+          <div class="planner-summary-block"><div class="planner-summary-section-title">Estratégia recomendada</div><div id="planner-strategy-text" style="font-size:12px;color:var(--muted);line-height:1.75"></div></div>
+          <div class="planner-summary-block"><div class="planner-summary-section-title">Públicos selecionados</div><div id="planner-selected-list" style="font-size:12px;color:var(--muted)"></div></div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
 
 <footer><p>Relojoaria Vintage · Guia Estratégico · <em>Facebook Ads Strategy</em></p></footer>
 
 <script>
-const IMG = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=500&h=320&q=80`;
-
-// ══════════════════════════════════════════════
-// DATA
-// ══════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════
+// CATALOG DATA — com url oficial e copies por marca
+// ═══════════════════════════════════════════════════════════
 const catalog = [
-  {
-    id:'alta',emoji:'🏆',name:'Alta Relojoaria',sub:'Grand Complications',
-    ticket:'R$ 30k–2M+',ticketRange:'alto',
-    description:'O ápice absoluto da relojoaria mundial. Peças com complicações únicas, produção artesanal limitada e valorização histórica garantida. Cada relógio é uma obra de arte mecânica que transcende gerações.',
-    stats:[{val:'35–60',lbl:'Faixa etária'},{val:'88%H',lbl:'Gênero'},{val:'Classe A',lbl:'Perfil'},{val:'7+',lbl:'FB Ads marcas'}],
-    persona:{avatar:'AS',bg:'#2a1e0e',name:'Alexandre S., 52',role:'CEO · Investidor · Colecionador',
-      renda:'R$ 80k+/mês',age:'48–62 anos',location:'SP, RJ, BSB',device:'iPhone Pro · iPad',
-      behaviors:['Viaja internacionalmente 8x ao ano','Subscreve WatchTime e Revolution','Frequenta leilões Christie\'s e Sotheby\'s','Membro de clubes de relojoaria exclusivos'],
-      motivations:['Status e exclusividade máxima','Investimento e patrimônio herdável','Herança familiar entre gerações','Paixão pela engenharia do mecanismo']},
-    fbInterests:['Patek Philippe','Audemars Piguet','Haute Horlogerie','Christie\'s','private banking','luxury goods','Richard Mille'],
-    fbBehaviors:['High Value Goods Buyers','International Business Traveler','Luxury Goods Purchasers','High Net Worth Individuals'],
-    fbPriority:'high',
-    copies:[
-      {label:'Colecionador',text:'Você já encontrou um Patek Philippe dos anos 80 revisado e com documentação completa? Temos peças raras que a maioria dos colecionadores nunca vê. Fale com a gente no WhatsApp — nosso estoque é atualizado toda semana.'},
-      {label:'Investidor',text:'Um Audemars Piguet Royal Oak vintage vale hoje 4x o que valia há 10 anos. Muitos clientes compram por paixão e vendem com lucro significativo. Fale conosco pelo WhatsApp — trabalhamos apenas com peças autenticadas e documentadas.'},
-      {label:'Status',text:'Existem relógios que entram numa sala antes de você. Temos Patek Philippe, Vacheron Constantin e Breguet vintage — peças que definiram a história da relojoaria mundial. Atendimento exclusivo pelo WhatsApp.'},
-    ],
-    brands:[
-      {name:'Patek Philippe',origin:'🇨🇭 Genebra, Suíça',models:['Nautilus','Calatrava','Grand Complications','Aquanaut'],ticket:'R$ 50k–2M+',ticketMin:50000,img:'1523275335684-37898b6baf30',fb:true,vin:true,hot:true},
-      {name:'Audemars Piguet',origin:'🇨🇭 Le Brassus, Suíça',models:['Royal Oak','Offshore','Code 11.59','Royal Oak Concept'],ticket:'R$ 40k–800k',ticketMin:40000,img:'1548171915-54dc4de9d294',fb:true,vin:true,hot:true},
-      {name:'Vacheron Constantin',origin:'🇨🇭 Genebra, Suíça',models:['Overseas','Patrimony','Traditionnelle','Les Cabinotiers'],ticket:'R$ 50k–1M',ticketMin:50000,img:'1614164185128-e4ec99c436d7',fb:true,vin:true,hot:false},
-      {name:'A. Lange & Söhne',origin:'🇩🇪 Glashütte, Alemanha',models:['Lange 1','Datograph','Zeitwerk','Saxonia'],ticket:'R$ 60k–500k',ticketMin:60000,img:'1547996160-81dfa63595aa',fb:true,vin:true,hot:false},
-      {name:'Jaeger-LeCoultre',origin:'🇨🇭 Le Sentier, Suíça',models:['Reverso','Master Ultra Thin','Atmos','Hybris Mechanica'],ticket:'R$ 25k–300k',ticketMin:25000,img:'1617038260897-41a1f14a8ca0',fb:true,vin:true,hot:false},
-      {name:'Breguet',origin:'🇨🇭 Suíça / 🇫🇷 Paris',models:['Classique','Tradition','Marine','Tourbillon'],ticket:'R$ 40k–800k',ticketMin:40000,img:'1542496658-e33a6d0d9e3d',fb:true,vin:true,hot:false},
-      {name:'Richard Mille',origin:'🇨🇭 Les Breuleux, Suíça',models:['RM 011','RM 035','RM 055','RM 027'],ticket:'R$ 200k–5M',ticketMin:200000,img:'1475256859232-225e9b9d65c5',fb:true,vin:false,hot:true},
-    ]
-  },
-  {
-    id:'luxo',emoji:'💎',name:'Luxo Clássico',sub:'Maisons Icônicas',
-    ticket:'R$ 8k–200k',ticketRange:'medio',
-    description:'As grandes maisons que definiram o luxo na relojoaria. Marcas com décadas de história, distribuição global e reconhecimento imediato. São o núcleo do mercado vintage de alto valor no Brasil.',
-    stats:[{val:'35–58',lbl:'Faixa etária'},{val:'78%H',lbl:'Gênero'},{val:'A / B+',lbl:'Perfil'},{val:'12+',lbl:'FB Ads marcas'}],
-    persona:{avatar:'RC',bg:'#1e0e0a',name:'Ricardo C., 44',role:'Diretor Comercial · Aficionado',
-      renda:'R$ 25k–60k/mês',age:'35–55 anos',location:'SP, Rio, Curitiba, BH',device:'iPhone · MacBook',
-      behaviors:['Viaja a negócios internacionalmente','Segue @gregduboc e influencers de relojoaria','Compra 1–3 relógios por ano','Pesquisa no Chrono24 regularmente'],
-      motivations:['Status profissional e distinção','Prazer estético e sensorial','Valor de revenda garantido','Presente de alto padrão para ocasiões especiais']},
-    fbInterests:['Rolex','Omega','Cartier','Breitling','TAG Heuer','Chrono24','luxury goods','IWC'],
-    fbBehaviors:['Purchased luxury goods online','High Net Worth Individuals','Business Traveler','Luxury Brand Followers'],
-    fbPriority:'high',
-    copies:[
-      {label:'Status',text:'Um Cartier Santos dos anos 80 diz mais sobre quem você é do que qualquer reunião. Peças autênticas, revisadas e com garantia. Consulte disponibilidade pelo WhatsApp — atendimento exclusivo para compradores sérios.'},
-      {label:'Raridade',text:'Rolex Daytona vintage dos anos 70: esses não aparecem mais. Temos peças raras com documentação original. Fale agora pelo WhatsApp antes de alguém levar — nosso estoque some rápido.'},
-      {label:'Investimento',text:'Quem comprou um Omega Speedmaster vintage há 5 anos multiplicou seu valor. Ainda encontramos peças assim por aqui. Manda mensagem no WhatsApp que te mostro o que temos hoje.'},
-    ],
-    brands:[
-      {name:'Rolex',origin:'🇨🇭 Genebra, Suíça',models:['Submariner','Daytona','GMT-Master II','Datejust','Day-Date'],ticket:'R$ 40k–500k',ticketMin:40000,img:'1611241440-861b27539889',fb:true,vin:true,hot:true},
-      {name:'Cartier',origin:'🇫🇷 Paris, França',models:['Santos','Tank','Ballon Bleu','Panthère','Pasha'],ticket:'R$ 10k–200k',ticketMin:10000,img:'1587836374828-4dbafa94cf0e',fb:true,vin:true,hot:true},
-      {name:'Omega',origin:'🇨🇭 Biel, Suíça',models:['Speedmaster','Seamaster','Constellation','De Ville','Aqua Terra'],ticket:'R$ 8k–150k',ticketMin:8000,img:'1523275335684-37898b6baf30',fb:true,vin:true,hot:true},
-      {name:'IWC Schaffhausen',origin:'🇨🇭 Schaffhausen, Suíça',models:['Pilot\'s','Portugieser','Portofino','Ingenieur','Mark XVIII'],ticket:'R$ 15k–300k',ticketMin:15000,img:'1548171915-54dc4de9d294',fb:true,vin:true,hot:false},
-      {name:'Panerai',origin:'🇮🇹 Florença, Itália',models:['Luminor','Radiomir','Submersible','Luminor Marina'],ticket:'R$ 15k–200k',ticketMin:15000,img:'1614164185128-e4ec99c436d7',fb:true,vin:true,hot:false},
-      {name:'Breitling',origin:'🇨🇭 Grenchen, Suíça',models:['Navitimer','Chronomat','Superocean','Avenger','Premier'],ticket:'R$ 12k–150k',ticketMin:12000,img:'1617038260897-41a1f14a8ca0',fb:true,vin:true,hot:true},
-      {name:'TAG Heuer',origin:'🇨🇭 La Chaux-de-Fonds, Suíça',models:['Carrera','Monaco','Aquaracer','Formula 1','Autavia'],ticket:'R$ 8k–80k',ticketMin:8000,img:'1542496658-e33a6d0d9e3d',fb:true,vin:true,hot:true},
-      {name:'Hublot',origin:'🇨🇭 Nyon, Suíça',models:['Big Bang','Classic Fusion','Spirit of Big Bang','Big Bang Unico'],ticket:'R$ 20k–500k',ticketMin:20000,img:'1547996160-81dfa63595aa',fb:true,vin:false,hot:true},
-      {name:'Zenith',origin:'🇨🇭 Le Locle, Suíça',models:['El Primero','Pilot','Defy','Chronomaster','A386'],ticket:'R$ 12k–150k',ticketMin:12000,img:'1475256859232-225e9b9d65c5',fb:true,vin:true,hot:false},
-      {name:'Chopard',origin:'🇨🇭 Genebra, Suíça',models:['L.U.C','Happy Sport','Alpine Eagle','Mille Miglia'],ticket:'R$ 12k–200k',ticketMin:12000,img:'1547996160-81dfa63595aa',fb:true,vin:true,hot:false},
-    ]
-  },
-  {
-    id:'sport',emoji:'🤿',name:'Sport & Dive',sub:'Ferramentas Profissionais',
-    ticket:'R$ 3k–80k',ticketRange:'medio',
-    description:'Criados para ambientes extremos — oceanos, cockpits de aviação, boxes da Fórmula 1. Com o tempo, viraram ícones de estilo. O mercado vintage de sport watches é o mais aquecido globalmente.',
-    stats:[{val:'28–52',lbl:'Faixa etária'},{val:'84%H',lbl:'Gênero'},{val:'B+ / A',lbl:'Perfil'},{val:'8+',lbl:'FB Ads marcas'}],
-    persona:{avatar:'FM',bg:'#0e1a1e',name:'Felipe M., 38',role:'Engenheiro · Esportista · Entusiasta',
-      renda:'R$ 12k–35k/mês',age:'28–50 anos',location:'Todas as capitais',device:'Android flagship · iPhone',
-      behaviors:['Pratica mergulho ou esportes extremos','Segue comunidades WIS no Reddit','Compra equipamentos esportivos premium','Assistiu James Bond e filmes de aventura'],
-      motivations:['Funcionalidade real + estilo único','Narrativa histórica (Lua, Fórmula 1, James Bond)','Robustez e engenharia superior','Ativo que valoriza com o tempo']},
-    fbInterests:['Tudor','Omega Seamaster','Rolex Submariner','mergulho','automobilismo','esportes radicais','Blancpain'],
-    fbBehaviors:['Viajantes frequentes','Compradores de equipamentos esportivos premium','Praticantes de esportes de aventura'],
-    fbPriority:'high',
-    copies:[
-      {label:'Aventura',text:'Esse Tudor Black Bay mergulhou a 200 metros e voltou impecável. Relógios que sobrevivem a tudo — e ainda ficam mais bonitos com os anos. Chama no WhatsApp e vê o que temos no estoque hoje.'},
-      {label:'Fórmula 1',text:'O mesmo modelo que piloto usou no grid da F1 nos anos 70. Heuer Autavia vintage, revisado, com história real. Disponível agora — fala comigo pelo WhatsApp antes de alguém levar.'},
-      {label:'James Bond',text:'O Omega Seamaster que acompanhou James Bond no fundo do oceano. Peças dos anos 60 a 90, revisadas e autenticadas. Manda mensagem no WhatsApp que te conto a história de cada uma.'},
-    ],
-    brands:[
-      {name:'Rolex Submariner',origin:'🇨🇭 Genebra, Suíça',models:['Submariner Date','No-date','Sea-Dweller','DEEPSEA'],ticket:'R$ 60k–180k',ticketMin:60000,img:'1611241440-861b27539889',fb:true,vin:true,hot:true},
-      {name:'Tudor',origin:'🇨🇭 Genebra, Suíça',models:['Black Bay','Pelagos','Ranger','Heritage','Submariner vintage'],ticket:'R$ 7k–40k',ticketMin:7000,img:'1587836374828-4dbafa94cf0e',fb:true,vin:true,hot:true},
-      {name:'Omega Seamaster',origin:'🇨🇭 Biel, Suíça',models:['Diver 300M','Planet Ocean','300 Vintage','Ploprof'],ticket:'R$ 10k–60k',ticketMin:10000,img:'1547996160-81dfa63595aa',fb:true,vin:true,hot:true},
-      {name:'Blancpain',origin:'🇨🇭 Le Brassus, Suíça',models:['Fifty Fathoms','Aqua Lung','Bathyscaphe','Fifty Fathoms Barakuda'],ticket:'R$ 20k–300k',ticketMin:20000,img:'1614164185128-e4ec99c436d7',fb:true,vin:true,hot:false},
-      {name:'Longines',origin:'🇨🇭 Saint-Imier, Suíça',models:['HydroConquest','Legend Diver','Avigation','Weems'],ticket:'R$ 3k–18k',ticketMin:3000,img:'1523275335684-37898b6baf30',fb:true,vin:true,hot:true},
-      {name:'Oris',origin:'🇨🇭 Hölstein, Suíça',models:['Aquis','Divers Sixty-Five','ProDiver','Carl Brashear'],ticket:'R$ 5k–25k',ticketMin:5000,img:'1548171915-54dc4de9d294',fb:true,vin:true,hot:false},
-      {name:'Bell & Ross',origin:'🇫🇷 Paris, França',models:['BR 01','BR 03','BR-X1 Skeleton','BR V2'],ticket:'R$ 10k–80k',ticketMin:10000,img:'1475256859232-225e9b9d65c5',fb:true,vin:false,hot:false},
-      {name:'Doxa',origin:'🇨🇭 Le Locle, Suíça',models:['SUB 300','SUB 200','SUB 600T','SUB 300T Carbon'],ticket:'R$ 5k–20k',ticketMin:5000,img:'1617038260897-41a1f14a8ca0',fb:false,vin:true,hot:false},
-    ]
-  },
-  {
-    id:'vintage',emoji:'⏱',name:'Vintage Puro',sub:'Décadas de Ouro 1950–1990',
-    ticket:'R$ 600–80k',ticketRange:'entrada',
-    description:'Relógios dos anos 1950–1990, o período de ouro da relojoaria mundial. Patinas únicas, mostradores tropicais, pusher em baquelite — cada imperfeição conta uma história. Os mais cobiçados por colecionadores puros.',
-    stats:[{val:'30–60',lbl:'Faixa etária'},{val:'82%H',lbl:'Gênero'},{val:'B / B+',lbl:'Perfil'},{val:'6+',lbl:'FB Ads marcas'}],
-    persona:{avatar:'DG',bg:'#1a1208',name:'Douglas G., 45',role:'Colecionador · Garimpeiro · Pesquisador',
-      renda:'R$ 10k–40k/mês',age:'30–60 anos',location:'Todo o Brasil',device:'Android / iPhone mix',
-      behaviors:['Acompanha leilões, brechós e feiras','Membro de grupos WhatsApp especializados','Pesquisa referências no Watchbase e Hodinkee','Compra e vende frequentemente'],
-      motivations:['História e autenticidade irrepetível','Thrill da caça ao garimpo raro','Valor de raridade crescente','Comunidade e pertencimento ao nicho']},
-    fbInterests:['vintage watches','colecionismo','antiguidades','Heuer vintage','leilão de arte','brechó de luxo','Universal Genève'],
-    fbBehaviors:['Compradores em marketplace','Colecionadores ativos','Interessados em arte e antiguidades'],
-    fbPriority:'med',
-    copies:[
-      {label:'Garimpo',text:'Acabou de chegar um Universal Genève Tri-Compax dos anos 60 com mostrador tropical original. Esse tipo de peça não aparece sempre. Fala comigo agora pelo WhatsApp — primeiro a chegar, primeiro a ver.'},
-      {label:'História',text:'Esse Heuer Monaco é do mesmo ano que Steve McQueen usou no filme. Não é réplica, não é restauração — é o original. Documentação, patina e história real. WhatsApp pra saber mais.'},
-      {label:'Raridade',text:'Tisot Seastar dos anos 70 com mostrador original e garantia de funcionamento. Peça que você não acha em loja nenhuma. Manda mensagem no WhatsApp e te mando mais fotos agora.'},
-    ],
-    brands:[
-      {name:'Universal Genève',origin:'🇨🇭 Genebra, Suíça',models:['Tri-Compax','Polerouter','Compax','Nina Rindt'],ticket:'R$ 5k–80k',ticketMin:5000,img:'1475256859232-225e9b9d65c5',fb:false,vin:true,hot:true},
-      {name:'Heuer (pré-TAG)',origin:'🇨🇭 Biel, Suíça',models:['Carrera','Monaco','Autavia','Silverstone','Monza'],ticket:'R$ 8k–200k',ticketMin:8000,img:'1542496658-e33a6d0d9e3d',fb:true,vin:true,hot:true},
-      {name:'Longines Vintage',origin:'🇨🇭 Saint-Imier, Suíça',models:['Conquest Vintage','Ultra-Chron','Flagship','Nonius'],ticket:'R$ 1,5k–20k',ticketMin:1500,img:'1523275335684-37898b6baf30',fb:true,vin:true,hot:true},
-      {name:'Hamilton Vintage',origin:'🇺🇸 Lancaster, EUA',models:['Khaki','Intra-Matic','American Classic','Ventura'],ticket:'R$ 1k–12k',ticketMin:1000,img:'1548171915-54dc4de9d294',fb:true,vin:true,hot:true},
-      {name:'Tissot Vintage',origin:'🇨🇭 Le Locle, Suíça',models:['Seastar','Sideral','T-Round','Navigator'],ticket:'R$ 800–8k',ticketMin:800,img:'1614164185128-e4ec99c436d7',fb:true,vin:true,hot:false},
-      {name:'Movado Vintage',origin:'🇨🇭 La Chaux-de-Fonds, Suíça',models:['Museum','Triple Calendar','Datron','Kingmatic'],ticket:'R$ 800–10k',ticketMin:800,img:'1617038260897-41a1f14a8ca0',fb:true,vin:true,hot:false},
-      {name:'Enicar Vintage',origin:'🇨🇭 Lengnau, Suíça',models:['Sherpa','Ultrasonic','Jet Graph','Ocean Pearl'],ticket:'R$ 600–6k',ticketMin:600,img:'1587836374828-4dbafa94cf0e',fb:false,vin:true,hot:false},
-      {name:'Bulova Vintage',origin:'🇺🇸 Nova York, EUA',models:['Accutron','Computron','Oceanographer','Spaceview'],ticket:'R$ 400–5k',ticketMin:400,img:'1611241440-861b27539889',fb:true,vin:true,hot:false},
-    ]
-  },
-  {
-    id:'japones',emoji:'🇯🇵',name:'Japonesas',sub:'Precisão & Confiabilidade',
-    ticket:'R$ 400–80k',ticketRange:'entrada',
-    description:'As manufaturas japonesas reinventaram a qualidade acessível. Com movimentos in-house, materiais avançados e design elegante, Seiko e Grand Seiko conquistaram colecionadores do mundo inteiro.',
-    stats:[{val:'22–45',lbl:'Faixa etária'},{val:'76%H',lbl:'Gênero'},{val:'B / C+',lbl:'Perfil'},{val:'6+',lbl:'FB Ads marcas'}],
-    persona:{avatar:'LT',bg:'#0a1218',name:'Lucas T., 29',role:'Engenheiro de TI · Entusiasta iniciante',
-      renda:'R$ 5k–18k/mês',age:'22–42 anos',location:'Todo o Brasil + interior',device:'Android · iPhone',
-      behaviors:['Consome relojoaria no YouTube e Reddit','Membro do r/Watches e r/Seiko','Pesquisa muito antes de comprar','Valoriza relação custo-benefício extrema'],
-      motivations:['Porta de entrada perfeita no hobby','Movimento automático fascinante','Precisão e engenharia japonesa','Comunidade WIS (Watch Is Snobbery)']},
-    fbInterests:['Seiko','Grand Seiko','Citizen Promaster','Orient','Casio G-Shock','tecnologia','gadgets premium'],
-    fbBehaviors:['Fãs de tecnologia','Entusiastas de gadgets','Jovens profissionais tech-savvy'],
-    fbPriority:'med',
-    copies:[
-      {label:'Iniciante',text:'Nenhum acessório conta uma história como um Seiko automático vintage de verdade. Modelos dos anos 60 a 90 com mecanismo incrível — a partir de R$ 600. Chama no WhatsApp e descobre o que temos hoje.'},
-      {label:'Técnico',text:'O Spring Drive do Grand Seiko é uma das engenharias mais fascinantes da relojoaria mundial. Mais preciso que a maioria dos suíços, com acabamento impecável. Fala comigo no WhatsApp — tenho peças especiais.'},
-      {label:'G-Shock',text:'G-Shock vintage dos anos 80 e 90: os originais que viraram ícone. DW-5600, DW-6900, modelos que hoje valem 5x mais. Achou um bom? Fala comigo no WhatsApp antes que alguém leve.'},
-    ],
-    brands:[
-      {name:'Seiko',origin:'🇯🇵 Tóquio, Japão',models:['Prospex (Diver)','5 Sports','Presage','Alpinist','King Seiko'],ticket:'R$ 600–40k',ticketMin:600,img:'1434494817466-5a696f00f6e5',fb:true,vin:true,hot:true},
-      {name:'Grand Seiko',origin:'🇯🇵 Shizukuishi, Japão',models:['Spring Drive','Snowflake','SBGA','Hi-Beat 36000'],ticket:'R$ 12k–150k',ticketMin:12000,img:'1548171915-54dc4de9d294',fb:true,vin:false,hot:true},
-      {name:'Citizen',origin:'🇯🇵 Tóquio, Japão',models:['Promaster','Eco-Drive','Tsuyosa','Attesa','Campanola'],ticket:'R$ 500–15k',ticketMin:500,img:'1523275335684-37898b6baf30',fb:true,vin:true,hot:false},
-      {name:'Casio G-Shock',origin:'🇯🇵 Tóquio, Japão',models:['DW-5600','GA-2100 (CasiOak)','GWG Mudmaster','DW-6900'],ticket:'R$ 400–5k',ticketMin:400,img:'1611241440-861b27539889',fb:true,vin:true,hot:true},
-      {name:'Orient',origin:'🇯🇵 Tóquio, Japão',models:['Bambino','Mako','Ray','Star','Orient Star'],ticket:'R$ 600–4k',ticketMin:600,img:'1587836374828-4dbafa94cf0e',fb:true,vin:true,hot:true},
-      {name:'Pulsar Vintage',origin:'🇯🇵 Japão',models:['P2 (LED)','Chronograph','Day-Date','Calculator'],ticket:'R$ 300–3k',ticketMin:300,img:'1617038260897-41a1f14a8ca0',fb:false,vin:true,hot:false},
-    ]
-  },
-  {
-    id:'moda',emoji:'👗',name:'Moda & Fashion',sub:'Lifestyle e Identidade',
-    ticket:'R$ 600–40k',ticketRange:'entrada',
-    description:'Relógios como extensão da identidade pessoal. Grandes maisons de moda trouxeram design sofisticado e apelo aspiracional. Público mais diverso em gênero, com forte influência visual.',
-    stats:[{val:'22–45',lbl:'Faixa etária'},{val:'58%F',lbl:'Gênero'},{val:'B / C+',lbl:'Perfil'},{val:'10+',lbl:'FB Ads marcas'}],
-    persona:{avatar:'MR',bg:'#1a0e16',name:'Marina R., 33',role:'Executiva de Marketing · Fashion Forward',
-      renda:'R$ 6k–20k/mês',age:'22–45 anos',location:'SP, RJ, BH e capitais',device:'iPhone · iPad',
-      behaviors:['Segue influencers de moda e lifestyle','Compra em brechós de luxo online','Usa Pinterest e Instagram para inspiração','Posta looks e mostra o relógio no pulso'],
-      motivations:['Expressão de identidade única','Complemento perfeito do outfit','Peça com história e narrativa','Presentear com significado e afeto']},
-    fbInterests:['Gucci','Cartier','moda vintage','slow fashion','brechó de luxo','Vogue Brasil','ELLE Brasil','Fossil vintage'],
-    fbBehaviors:['Compradoras fashion online','Seguidoras de influencers de moda','Apreciadoras de lifestyle de luxo'],
-    fbPriority:'med',
-    copies:[
-      {label:'Estilo',text:'Nenhum acessório conta uma história como um relógio vintage de verdade. Omega, Tissot, Fossil — peças dos anos 60 a 90 com estilo que nenhuma loja tem. Chama no WhatsApp e descobre o que temos hoje.'},
-      {label:'Presente',text:'O presente que ela vai usar e lembrar por décadas. Relógios vintage suíços revisados — de R$ 700 a R$ 8.000. Conta a ocasião pra gente pelo WhatsApp e ajudamos a escolher a peça certa.'},
-      {label:'Slow Fashion',text:'Slow fashion de verdade: um relógio dos anos 70 que durou mais de 50 anos e vai durar mais 50. Sem fast fashion, sem descarte — peças com propósito e história. Chama no WhatsApp.'},
-    ],
-    brands:[
-      {name:'Cartier',origin:'🇫🇷 Paris, França',models:['Tank','Santos','Ballon Bleu','Panthère','Ronde'],ticket:'R$ 10k–200k',ticketMin:10000,img:'1587836374828-4dbafa94cf0e',fb:true,vin:true,hot:true},
-      {name:'Gucci Timepieces',origin:'🇮🇹 Florença, Itália',models:['G-Timeless','Grip','Dive','Interlocking'],ticket:'R$ 5k–40k',ticketMin:5000,img:'1542496658-e33a6d0d9e3d',fb:true,vin:false,hot:false},
-      {name:'Michael Kors',origin:'🇺🇸 Nova York, EUA',models:['Parker','Runway','Slim Runway','Sofie'],ticket:'R$ 1k–5k',ticketMin:1000,img:'1617038260897-41a1f14a8ca0',fb:true,vin:false,hot:true},
-      {name:'Fossil',origin:'🇺🇸 Richardson, Texas',models:['Townsman','Grant','Neutra','Heritage','Carlie'],ticket:'R$ 700–4k',ticketMin:700,img:'1614164185128-e4ec99c436d7',fb:true,vin:true,hot:true},
-      {name:'Swatch',origin:'🇨🇭 Biel, Suíça',models:['Sistem51','Big Bold','MoonSwatch','Irony Chrono'],ticket:'R$ 300–3k',ticketMin:300,img:'1548171915-54dc4de9d294',fb:true,vin:true,hot:true},
-      {name:'Daniel Wellington',origin:'🇸🇪 Estocolmo, Suécia',models:['Classic Sheffield','Petite Melrose','Iconic Link','Quadro'],ticket:'R$ 600–3k',ticketMin:600,img:'1475256859232-225e9b9d65c5',fb:true,vin:false,hot:true},
-      {name:'Timex',origin:'🇺🇸 Middlebury, EUA',models:['Marlin','Waterbury','Q Timex','M79','Expedition'],ticket:'R$ 300–2k',ticketMin:300,img:'1611241440-861b27539889',fb:true,vin:true,hot:true},
-      {name:'Hermès Timepieces',origin:'🇫🇷 Paris, França',models:['Arceau','Cape Cod','H08','Slim d\'Hermès'],ticket:'R$ 15k–200k',ticketMin:15000,img:'1547996160-81dfa63595aa',fb:true,vin:false,hot:false},
-    ]
-  },
-  {
-    id:'alemao',emoji:'🇩🇪',name:'Alemãs & Glashütte',sub:'Engenharia & Minimalismo',
-    ticket:'R$ 3k–300k',ticketRange:'medio',
-    description:'A escola alemã de Glashütte produziu obras refinadas com rodiagem por 3/4, guilhoché ao vivo e movimentos hand-finished. Atraem o colecionador mais técnico e exigente.',
-    stats:[{val:'32–58',lbl:'Faixa etária'},{val:'86%H',lbl:'Gênero'},{val:'A / B+',lbl:'Perfil'},{val:'5+',lbl:'FB Ads marcas'}],
-    persona:{avatar:'BM',bg:'#0e1210',name:'Bruno M., 47',role:'Engenheiro · Arquiteto · Colecionador Técnico',
-      renda:'R$ 20k–60k/mês',age:'32–58 anos',location:'SP, Curitiba, Porto Alegre',device:'iPhone · MacBook Pro',
-      behaviors:['Aprecia design funcional e minimalista','Conhece cada detalhe dos movimentos','Lê Hodinkee e Fratello Watches diariamente','Prefere peças raras de nicho a nomes famosos'],
-      motivations:['Apreciação técnica profunda do movimento','Design austero, honesto e funcional','Raridade e exclusividade real','Patrimônio cultural alemão único']},
-    fbInterests:['A. Lange & Söhne','NOMOS Glashütte','Glashütte Original','design bauhaus','Hodinkee','Fratello Watches'],
-    fbBehaviors:['Interessados em design e arquitetura','Leitores de publicações especializadas','Engenheiros e arquitetos de alto nível'],
-    fbPriority:'low',
-    copies:[
-      {label:'Técnico',text:'O NOMOS Tangente tem um design que envelhece melhor que qualquer moda. Feito à mão em Glashütte, com calibre próprio. Para quem entende que menos é mais. Fala comigo no WhatsApp.'},
-      {label:'Engenharia',text:'O Datograph da A. Lange & Söhne tem o cronógrafo mais bonito da história da relojoaria. Flyback, rodiagem por 3/4, guilhoché ao vivo. Peça rara disponível — WhatsApp pra saber mais.'},
-      {label:'Nicho',text:'Glashütte Original Senator com automatik alemão dos anos 90: menos famoso que os suíços, mas superior em acabamento. Preço de entrada real para alta relojoaria alemã. WhatsApp agora.'},
-    ],
-    brands:[
-      {name:'A. Lange & Söhne',origin:'🇩🇪 Glashütte, Alemanha',models:['Lange 1','Datograph','Zeitwerk','Saxonia','Tourbograph'],ticket:'R$ 60k–500k',ticketMin:60000,img:'1614164185128-e4ec99c436d7',fb:true,vin:true,hot:false},
-      {name:'Glashütte Original',origin:'🇩🇪 Glashütte, Alemanha',models:['Senator','PanoMaticLunar','SeaQ','Pavonina'],ticket:'R$ 10k–100k',ticketMin:10000,img:'1548171915-54dc4de9d294',fb:true,vin:true,hot:false},
-      {name:'NOMOS Glashütte',origin:'🇩🇪 Glashütte, Alemanha',models:['Tangente','Metro','Club Sport','Ahoi','Orion'],ticket:'R$ 6k–30k',ticketMin:6000,img:'1523275335684-37898b6baf30',fb:true,vin:false,hot:true},
-      {name:'Junghans',origin:'🇩🇪 Schramberg, Alemanha',models:['max bill','Meister','Form','max bill Damen'],ticket:'R$ 1k–12k',ticketMin:1000,img:'1617038260897-41a1f14a8ca0',fb:false,vin:true,hot:false},
-      {name:'Stowa',origin:'🇩🇪 Engelsbrand, Alemanha',models:['Flieger','Marine Original','Antea','Partitio'],ticket:'R$ 2k–15k',ticketMin:2000,img:'1475256859232-225e9b9d65c5',fb:false,vin:true,hot:false},
-      {name:'Maurice Lacroix',origin:'🇨🇭 Suíça',models:['Aikon','Eliros','Pontos','Masterpiece Skeleton'],ticket:'R$ 4k–30k',ticketMin:4000,img:'1547996160-81dfa63595aa',fb:true,vin:false,hot:false},
-    ]
-  },
-  {
-    id:'acessivel',emoji:'⌚',name:'Mid-Range & Acessível',sub:'Entrada no Hobby',
-    ticket:'R$ 400–12k',ticketRange:'entrada',
-    description:'O segmento que democratiza a relojoaria. Com R$ 600 a R$ 8k é possível ter um automático suíço ou japonês de altíssima qualidade. O público que mais cresce no Brasil.',
-    stats:[{val:'22–40',lbl:'Faixa etária'},{val:'70%H',lbl:'Gênero'},{val:'B / C',lbl:'Perfil'},{val:'7+',lbl:'FB Ads marcas'}],
-    persona:{avatar:'GT',bg:'#0e1a10',name:'Gabriel T., 26',role:'Analista · Jovem profissional · Iniciante',
-      renda:'R$ 3k–12k/mês',age:'22–40 anos',location:'Todo o Brasil',device:'Android / iPhone entrada',
-      behaviors:['Assiste YouTube sobre relógios','Compara preços no ML e OLX','Segue @ivuwbr e @watchtime_brasil','Primeira ou segunda compra de vida'],
-      motivations:['Descoberta do mundo da relojoaria','Qualidade suíça/japonesa ao alcance','Mostrador automático fascinante','Presente especial para ocasião marcante']},
-    fbInterests:['Tissot','Hamilton','Seiko','Longines','relojoaria','acessórios masculinos','Dia dos Pais','presente masculino'],
-    fbBehaviors:['Jovens profissionais','Compradores de médio valor','Interessados em relógios e moda masculina'],
-    fbPriority:'high',
-    copies:[
-      {label:'Primeiro relógio',text:'Seu primeiro relógio automático suíço por R$ 900? Acontece aqui. Tissot, Hamilton, Longines vintage — peças que duram décadas e só ficam mais bonitas. Fala comigo no WhatsApp e escolhemos juntos.'},
-      {label:'Dia dos Pais',text:'O presente que ele vai usar e lembrar por décadas. Relógios automáticos suíços vintage de R$ 700 a R$ 5.000 — com garantia e caixa especial. Conta a história do seu pai e a gente ajuda a escolher. WhatsApp agora.'},
-      {label:'Custo-benefício',text:'Longines vintage dos anos 70 com movimento ETA, revisado e funcionando perfeitamente. Por menos que um smartwatch. Chama no WhatsApp — te mando fotos e vídeo do funcionamento agora.'},
-    ],
-    brands:[
-      {name:'Tissot',origin:'🇨🇭 Le Locle, Suíça',models:['PRX','T-Race','Seastar 1000','Heritage','Le Locle'],ticket:'R$ 2k–12k',ticketMin:2000,img:'1523275335684-37898b6baf30',fb:true,vin:true,hot:true},
-      {name:'Hamilton',origin:'🇺🇸/🇨🇭 Suíça',models:['Khaki Field','Jazzmaster','Ventura','Intra-Matic','Pulsar'],ticket:'R$ 3k–15k',ticketMin:3000,img:'1548171915-54dc4de9d294',fb:true,vin:true,hot:true},
-      {name:'Longines',origin:'🇨🇭 Saint-Imier, Suíça',models:['HydroConquest','Master','Conquest Classic','Mini DolceVita','Record'],ticket:'R$ 3k–18k',ticketMin:3000,img:'1614164185128-e4ec99c436d7',fb:true,vin:true,hot:true},
-      {name:'Certina',origin:'🇨🇭 Grenchen, Suíça',models:['DS Action Diver','DS-1','DS Podium','DS Caimano'],ticket:'R$ 2k–8k',ticketMin:2000,img:'1617038260897-41a1f14a8ca0',fb:true,vin:true,hot:false},
-      {name:'Mido',origin:'🇨🇭 Biel, Suíça',models:['Ocean Star','Baroncelli','Commander','Multifort','Helmsman'],ticket:'R$ 2k–8k',ticketMin:2000,img:'1475256859232-225e9b9d65c5',fb:true,vin:true,hot:false},
-      {name:'Frederique Constant',origin:'🇨🇭 Genebra, Suíça',models:['Slimline','Classic Index','Highlife','Classics Manufacture'],ticket:'R$ 3k–15k',ticketMin:3000,img:'1587836374828-4dbafa94cf0e',fb:true,vin:false,hot:false},
-      {name:'Victorinox',origin:'🇨🇭 Ibach, Suíça',models:['INOX','Alliance','Journey 1884','Classic'],ticket:'R$ 1k–6k',ticketMin:1000,img:'1547996160-81dfa63595aa',fb:true,vin:false,hot:false},
-    ]
-  },
-  {
-    id:'smart',emoji:'📱',name:'Smartwatch',sub:'Tecnologia Vestível',
-    ticket:'R$ 700–12k',ticketRange:'entrada',
-    description:'O mercado que revolucionou o pulso moderno. Healthtech, conectividade e design num só produto. Interessante como contra-posicionamento para o vintage.',
-    stats:[{val:'18–40',lbl:'Faixa etária'},{val:'52%H',lbl:'Gênero'},{val:'B / C',lbl:'Perfil'},{val:'6+',lbl:'FB Ads marcas'}],
-    persona:{avatar:'CA',bg:'#0a1218',name:'Carolina A., 28',role:'Profissional de Tech · Fitness · Conectada',
-      renda:'R$ 4k–15k/mês',age:'18–40 anos',location:'Todo o Brasil',device:'iPhone ou Android premium',
-      behaviors:['Usa Apple Watch ou Samsung Watch','Pratica exercícios regularmente','Monitora saúde pelo pulso','Segue tendências de tecnologia e gadgets'],
-      motivations:['Saúde e bem-estar monitorado','Conectividade e praticidade no dia a dia','Integração perfeita com smartphone','Design moderno e funcional']},
-    fbInterests:['Apple Watch','Samsung Watch','Garmin','fitness','tecnologia','gadgets','saúde','wearables'],
-    fbBehaviors:['Compradores de tecnologia premium','Praticantes de esportes e fitness','Fãs de gadgets e inovação'],
-    fbPriority:'med',
-    copies:[
-      {label:'Contra-posicionamento',text:'Enquanto o smartwatch fica obsoleto em 2 anos, esse Omega dos anos 70 só valoriza. Um relógio que nunca precisa de atualização — e que vai continuar valendo mais daqui a 20 anos. WhatsApp pra saber mais.'},
-      {label:'Diferencial',text:'Todo mundo tem Apple Watch. Ninguém tem um Seiko Alpinist vintage dos anos 70 no pulso. Seja diferente — fala comigo no WhatsApp e te mostro o que temos de especial.'},
-    ],
-    brands:[
-      {name:'Apple Watch',origin:'🇺🇸 Cupertino, EUA',models:['Series 9','Ultra 2','SE 2'],ticket:'R$ 2k–12k',ticketMin:2000,img:'1434494817466-5a696f00f6e5',fb:true,vin:false,hot:true},
-      {name:'Samsung Galaxy Watch',origin:'🇰🇷 Suwon, Coreia',models:['Galaxy Watch 7','Ultra','FE'],ticket:'R$ 1k–5k',ticketMin:1000,img:'1542496658-e33a6d0d9e3d',fb:true,vin:false,hot:true},
-      {name:'Garmin',origin:'🇺🇸 Olathe, EUA',models:['Fenix 8','Forerunner','Vívoactive 5','Instinct 3'],ticket:'R$ 1k–8k',ticketMin:1000,img:'1611241440-861b27539889',fb:true,vin:false,hot:true},
-      {name:'Withings',origin:'🇫🇷 Issy, França',models:['ScanWatch 2','ScanWatch Light','Steel HR'],ticket:'R$ 1k–5k',ticketMin:1000,img:'1617038260897-41a1f14a8ca0',fb:true,vin:false,hot:false},
-      {name:'TAG Heuer Connected',origin:'🇨🇭 La Chaux-de-Fonds, Suíça',models:['Calibre E4 45mm','Calibre E4 Golf'],ticket:'R$ 10k–30k',ticketMin:10000,img:'1547996160-81dfa63595aa',fb:true,vin:false,hot:false},
-      {name:'Fitbit',origin:'🇺🇸 San Francisco, EUA',models:['Versa 4','Sense 2','Charge 6'],ticket:'R$ 700–3k',ticketMin:700,img:'1548171915-54dc4de9d294',fb:true,vin:false,hot:false},
-    ]
-  },
+{
+  id:'alta',emoji:'🏆',name:'Alta Relojoaria',sub:'Grand Complications',
+  ticket:'R$ 30k–2M+',ticketRange:'alto',
+  description:'O ápice absoluto da relojoaria mundial. Peças com complicações únicas, produção artesanal limitada e valorização histórica garantida.',
+  stats:[{val:'35–60',lbl:'Faixa etária'},{val:'88%H',lbl:'Gênero'},{val:'Classe A',lbl:'Perfil'},{val:'7+',lbl:'FB Ads marcas'}],
+  persona:{avatar:'AS',bg:'#2a1e0e',name:'Alexandre S., 52',role:'CEO · Investidor · Colecionador',renda:'R$ 80k+/mês',age:'48–62 anos',location:'SP, RJ, BSB',device:'iPhone Pro · iPad',
+    behaviors:['Viaja internacionalmente 8x ao ano','Subscreve WatchTime e Revolution','Frequenta leilões Christie\'s e Sotheby\'s','Membro de clube de relojoaria exclusivo'],
+    motivations:['Status e exclusividade máxima','Investimento e patrimônio herdável','Herança familiar entre gerações','Paixão pela engenharia do mecanismo']},
+  fbInterests:['Patek Philippe','Audemars Piguet','Haute Horlogerie','Christie\'s','private banking','luxury goods','Richard Mille'],
+  fbBehaviors:['High Value Goods Buyers','International Business Traveler','Luxury Goods Purchasers','High Net Worth Individuals'],
+  fbPriority:'high',
+  brands:[
+    {name:'Patek Philippe',origin:'🇨🇭 Genebra, Suíça',url:'https://www.patek.com',models:['Nautilus','Calatrava','Grand Complications','Aquanaut'],ticket:'R$ 50k–2M+',ticketMin:50000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Colecionador',text:'Um Patek Philippe dos anos 80 não é só um relógio — é um testamento mecânico que sobrevive a gerações. Temos Calatravas e Nautilus vintage com documentação original e revisão completa. Fale conosco no WhatsApp antes que outro colecionador nos contate primeiro.'},
+        {label:'Investidor',text:'O Nautilus 5711 foi descontinuado e hoje vale mais de 3× o preço de tabela. Quem investiu em Patek Philippe há 10 anos está colhendo retornos que nenhum fundo de renda fixa entregou. Temos peças autenticadas disponíveis — WhatsApp para conversar.'}
+      ]},
+    {name:'Audemars Piguet',origin:'🇨🇭 Le Brassus, Suíça',url:'https://www.audemarspiguet.com',models:['Royal Oak','Offshore','Code 11.59','Royal Oak Concept'],ticket:'R$ 40k–800k',ticketMin:40000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Ícone Cultural',text:'Em 1972, Gerald Genta desenhou o Royal Oak num guardanapo e mudou a relojoaria para sempre. Um octógono de aço que vale mais que ouro. Temos exemplares vintage do AP que contam essa história no pulso. WhatsApp agora.'},
+        {label:'Status',text:'O Royal Oak Offshore é o relógio que aparece nas fotos dos CEOs mais jovens do mundo. Temos versões vintage originais, com bracelet completo e caixa. Atendimento exclusivo — WhatsApp para ver o estoque disponível.'}
+      ]},
+    {name:'Vacheron Constantin',origin:'🇨🇭 Genebra, Suíça',url:'https://www.vacheron-constantin.com',models:['Overseas','Patrimony','Traditionnelle'],ticket:'R$ 50k–1M',ticketMin:50000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Tradição',text:'Fundada em 1755, a Vacheron Constantin é a manufatura de relojoaria em operação contínua mais antiga do mundo. Cada peça vintage carrega quase três séculos de tradição. Temos exemplares raros — WhatsApp para conhecer.'},
+        {label:'Exclusividade',text:'A Vacheron produz menos relógios que qualquer outra grande maison. Ter um Overseas ou Traditionnelle vintage é pertencer a um grupo de apenas algumas centenas de pessoas no Brasil. WhatsApp para ver disponibilidade.'}
+      ]},
+    {name:'A. Lange & Söhne',origin:'🇩🇪 Glashütte, Alemanha',url:'https://www.alange-soehne.com',models:['Lange 1','Datograph','Zeitwerk','Saxonia'],ticket:'R$ 60k–500k',ticketMin:60000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Engenharia',text:'O Datograph da A. Lange & Söhne tem o cronógrafo a martelo mais bonito da história da relojoaria — visível pelo fundo de cristal. Manufatura alemã pura, feita à mão em Glashütte. Peças raras disponíveis — WhatsApp.'},
+        {label:'Raridade',text:'A Lange foi reconstruída do zero em 1994, após décadas fechada pela DDR. Cada relógio tem número de série e histórico documentado. Possuir um Lange 1 vintage é ter um pedaço único da história alemã no pulso. WhatsApp.'}
+      ]},
+    {name:'Jaeger-LeCoultre',origin:'🇨🇭 Le Sentier, Suíça',url:'https://www.jaeger-lecoultre.com',models:['Reverso','Master Ultra Thin','Atmos','Hybris Mechanica'],ticket:'R$ 25k–300k',ticketMin:25000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Reverso',text:'O Reverso da JLC foi criado em 1931 para jogadores de polo britânicos na Índia — o mostrador girava para proteger o cristal durante o jogo. Mais de 90 anos depois, é um ícone art déco. Temos exemplares vintage raros. WhatsApp.'},
+        {label:'Manufacture',text:'A JLC é chamada de "a manufacture das manufactures" — produz movimentos que outras grandes casas compram. Ter uma JLC vintage é ter o mesmo motor que move Patek e AP, pelo custo de entrada. WhatsApp para ver opções.'}
+      ]},
+    {name:'Breguet',origin:'🇨🇭 Suíça',url:'https://www.breguet.com',models:['Classique','Tradition','Marine'],ticket:'R$ 40k–800k',ticketMin:40000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Inventores',text:'Abraham-Louis Breguet inventou o tourbillon, a mola de âncora e as ponteiros em forma de pera que usamos até hoje. Usar um Breguet vintage é usar a mesma tecnologia que Napoleão, Maria Antonieta e Wellington usaram. WhatsApp.'},
+        {label:'Raridade',text:'Breguet vintage dos séculos XIX e XX são itens de museu que ainda funcionam. Temos peças da era mais gloriosa da marca, com documentação de proveniência. Atendimento sob reserva — WhatsApp exclusivo.'}
+      ]},
+    {name:'Richard Mille',origin:'🇨🇭 Les Breuleux, Suíça',url:'https://www.richardmille.com',models:['RM 011','RM 035','RM 055'],ticket:'R$ 200k–5M',ticketMin:200000,fb:true,vin:false,hot:true,
+      copies:[
+        {label:'Ultra Moderno',text:'O Richard Mille não tem vintage — ele IS o futuro. Compósito de titânio, grafeno e TPT Quartz. Cada RM é literalmente mais avançado que um carro de F1. Temos modelos seminovos com lista de espera. WhatsApp exclusivo.'},
+        {label:'F1',text:'Vettel, Alonso, Nadal, Bolt — os melhores do mundo no pulso. Richard Mille cria relógios que resistem a forças G que destruiriam qualquer outro. Disponibilidade limitada — WhatsApp agora para saber o que temos.'}
+      ]}
+  ]
+},
+{
+  id:'luxo',emoji:'💎',name:'Luxo Clássico',sub:'Maisons Icônicas',
+  ticket:'R$ 8k–200k',ticketRange:'medio',
+  description:'As grandes maisons que definiram o luxo na relojoaria. Marcas com décadas de história, distribuição global e reconhecimento imediato.',
+  stats:[{val:'35–58',lbl:'Faixa etária'},{val:'78%H',lbl:'Gênero'},{val:'A / B+',lbl:'Perfil'},{val:'10+',lbl:'FB Ads marcas'}],
+  persona:{avatar:'RC',bg:'#1e0e0a',name:'Ricardo C., 44',role:'Diretor Comercial · Aficionado',renda:'R$ 25k–60k/mês',age:'35–55 anos',location:'SP, Rio, Curitiba, BH',device:'iPhone · MacBook',
+    behaviors:['Viaja a negócios internacionalmente','Segue influencers de relojoaria','Compra 1–3 relógios por ano','Pesquisa no Chrono24'],
+    motivations:['Status profissional e distinção','Prazer estético','Valor de revenda garantido','Presente de alto padrão']},
+  fbInterests:['Rolex','Omega','Cartier','Breitling','TAG Heuer','Chrono24','luxury goods','IWC'],
+  fbBehaviors:['Purchased luxury goods online','High Net Worth Individuals','Business Traveler'],
+  fbPriority:'high',
+  brands:[
+    {name:'Rolex',origin:'🇨🇭 Genebra, Suíça',url:'https://www.rolex.com',models:['Submariner','Daytona','GMT-Master II','Datejust','Day-Date'],ticket:'R$ 40k–500k',ticketMin:40000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Daytona',text:'O Daytona ref. 6263 dos anos 70 foi vendido por 17,5 milhões de dólares em leilão — era de Paul Newman. Temos Daytonas vintage autênticos, muito abaixo disso, com a mesma alma. WhatsApp para ver o estoque agora.'},
+        {label:'Submariner',text:'O Submariner mergulhou com James Bond, foi ao fundo do oceano e voltou impecável. 70 anos de design imutável porque perfeição não precisa mudar. Temos exemplares dos anos 60 a 90 com garantia. WhatsApp.'}
+      ]},
+    {name:'Cartier',origin:'🇫🇷 Paris, França',url:'https://www.cartier.com',models:['Santos','Tank','Ballon Bleu','Panthère','Pasha'],ticket:'R$ 10k–200k',ticketMin:10000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Santos',text:'Em 1904, Louis Cartier criou o Santos para o aviador Alberto Santos-Dumont — o primeiro relógio de pulso masculino da história. Um brasileiro inspirou esse ícone. Temos Santos vintage dos anos 70 a 90. WhatsApp.'},
+        {label:'Tank',text:'O Tank foi apresentado em 1917 inspirado nos tanques da Primeira Guerra. Depois virou o relógio de Jackie Kennedy, Yves Saint Laurent e Andy Warhol. Temos Tanks vintage em ouro e prata. WhatsApp.'}
+      ]},
+    {name:'Omega',origin:'🇨🇭 Biel, Suíça',url:'https://www.omegawatches.com',models:['Speedmaster','Seamaster','Constellation','De Ville'],ticket:'R$ 8k–150k',ticketMin:8000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Lua',text:'Em 21 de julho de 1969, o Omega Speedmaster estava no pulso de Neil Armstrong quando ele pisou na Lua. A NASA o escolheu por sobreviver ao vácuo, radiação e temperaturas extremas. Temos Speedmasters dos anos 60 a 80. WhatsApp.'},
+        {label:'Bond',text:'O Omega Seamaster está no pulso de James Bond desde GoldenEye (1995). Um ícone de ação que também é obra de relojoaria suíça fina. Temos Seamasters vintage dos anos 50 ao 90 — WhatsApp para ver.'}
+      ]},
+    {name:'IWC Schaffhausen',origin:'🇨🇭 Schaffhausen, Suíça',url:'https://www.iwc.com',models:['Pilot\'s','Portugieser','Portofino','Mark XVIII'],ticket:'R$ 15k–300k',ticketMin:15000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Pilot\'s',text:'Os relógios de aviação da IWC foram criados para pilotos da Luftwaffe e da RAF na Segunda Guerra. O Big Pilot vintage dos anos 40 é hoje um dos mais cobiçados do mercado. Temos exemplares autênticos — WhatsApp.'},
+        {label:'Portugieser',text:'O Portugieser foi criado para marinheiros portugueses que precisavam de precisão náutica. Hoje é sinônimo de elegância esportiva. Temos Portugiesers vintage dos anos 60 a 90 — WhatsApp.'}
+      ]},
+    {name:'Panerai',origin:'🇮🇹 Florença, Itália',url:'https://www.panerai.com',models:['Luminor','Radiomir','Submersible'],ticket:'R$ 15k–200k',ticketMin:15000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Marinha',text:'O Panerai foi criado exclusivamente para os mergulhadores da Marinha Italiana na Segunda Guerra — confidencial por décadas. Só nos anos 90 foi lançado ao público. Um relógio com segredo de Estado. WhatsApp para ver.'},
+        {label:'Radiomir',text:'O Radiomir 1940 tem uma caixa de aço de 47mm que domina o pulso. Para quem não quer um relógio — quer uma declaração. Temos Radiomir vintage dos anos 90 e 2000. WhatsApp agora.'}
+      ]},
+    {name:'Breitling',origin:'🇨🇭 Grenchen, Suíça',url:'https://www.breitling.com',models:['Navitimer','Chronomat','Superocean','Avenger'],ticket:'R$ 12k–150k',ticketMin:12000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Navitimer',text:'O Navitimer foi criado em 1952 com uma régua de cálculo circular — pilotos calculavam velocidade, altitude e autonomia no pulso. Hoje é o cronógrafo de aviação mais icônico da história. Vintage dos anos 60. WhatsApp.'},
+        {label:'Chronomat',text:'O Breitling Chronomat dos anos 80 com pulseira Rouleaux foi o relógio favorito da força aérea italiana — e de meia Hollywood. Temos exemplares com caixa original e revisão completa. WhatsApp.'}
+      ]},
+    {name:'TAG Heuer',origin:'🇨🇭 La Chaux-de-Fonds, Suíça',url:'https://www.tagheuer.com',models:['Carrera','Monaco','Aquaracer','Formula 1','Autavia'],ticket:'R$ 8k–80k',ticketMin:8000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Monaco McQueen',text:'Em Le Mans (1971), Steve McQueen usou um TAG Heuer Monaco no pulso — e no filme. O quadrado azul que redefiniu o que é cool. Temos Monaco vintage dos anos 70 originais. WhatsApp antes que alguém leve.'},
+        {label:'Carrera',text:'O Carrera foi nomeado pela estrada mais perigosa do mundo, a Carrera Panamericana. Um cronógrafo desenhado para pilotos de corrida. Temos ref. 2447 e 3647 vintage com pedigree real. WhatsApp.'}
+      ]},
+    {name:'Hublot',origin:'🇨🇭 Nyon, Suíça',url:'https://www.hublot.com',models:['Big Bang','Classic Fusion','Spirit of Big Bang'],ticket:'R$ 20k–500k',ticketMin:20000,fb:true,vin:false,hot:true,
+      copies:[
+        {label:'Big Bang',text:'O Big Bang lançou em 2005 e em 5 anos a Hublot passou de marca obscura para fenômeno global. Borracha, titânio e ouro numa mistura que ninguém tinha feito antes. Temos edições especiais disponíveis. WhatsApp.'},
+        {label:'Fusão',text:'A arte de fusão da Hublot — cerâmica com ouro, carbono com diamante — criou relógios que nenhuma outra maison ousaria fazer. Para colecionadores que querem o contemporâneo raro. WhatsApp.'}
+      ]},
+    {name:'Zenith',origin:'🇨🇭 Le Locle, Suíça',url:'https://www.zenith-watches.com',models:['El Primero','Pilot','Defy','Chronomaster'],ticket:'R$ 12k–150k',ticketMin:12000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'El Primero',text:'O El Primero foi lançado em 1969 — o primeiro cronógrafo automático de alta frequência do mundo. Quando a Zenith deveria descontinuá-lo sob ordens da Corporação, um engenheiro escondeu os moldes no sótão. Hoje é lenda. WhatsApp.'},
+        {label:'A386',text:'A referência A386 original de 1969 é hoje um dos cronógrafos mais desejados do mercado vintage. Tricolor (preto, cinza e ouro) no mostrador, alta frequência, mecanismo suíço puro. Temos disponível — WhatsApp.'}
+      ]}
+  ]
+},
+{
+  id:'sport',emoji:'🤿',name:'Sport & Dive',sub:'Ferramentas Profissionais',
+  ticket:'R$ 3k–80k',ticketRange:'medio',
+  description:'Criados para ambientes extremos — oceanos, cockpits de aviação, boxes da Fórmula 1. Com o tempo, viraram ícones de estilo.',
+  stats:[{val:'28–52',lbl:'Faixa etária'},{val:'84%H',lbl:'Gênero'},{val:'B+ / A',lbl:'Perfil'},{val:'8+',lbl:'FB Ads marcas'}],
+  persona:{avatar:'FM',bg:'#0e1a1e',name:'Felipe M., 38',role:'Engenheiro · Esportista · Entusiasta',renda:'R$ 12k–35k/mês',age:'28–50 anos',location:'Todas as capitais',device:'Android flagship · iPhone',
+    behaviors:['Pratica mergulho ou esportes extremos','Segue comunidades WIS no Reddit','Compra equipamentos esportivos premium'],
+    motivations:['Funcionalidade real + estilo','Narrativa histórica (Lua, F1)','Robustez e engenharia','Ativo que valoriza']},
+  fbInterests:['Tudor','Omega Seamaster','Rolex Submariner','mergulho','automobilismo','esportes radicais'],
+  fbBehaviors:['Viajantes frequentes','Compradores de equipamentos esportivos premium'],
+  fbPriority:'high',
+  brands:[
+    {name:'Rolex Submariner',origin:'🇨🇭 Genebra, Suíça',url:'https://www.rolex.com/watches/submariner.html',models:['Submariner Date','No-date','Sea-Dweller','DEEPSEA'],ticket:'R$ 60k–180k',ticketMin:60000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'James Bond',text:'O Submariner ref. 5513 era o relógio de James Bond nos filmes dos anos 60 e 70. Sean Connery usou um no pulso e moldou para sempre o que é "masculino e elegante". Temos exemplares dos anos 70. WhatsApp.'},
+        {label:'Mergulho',text:'100m de profundidade, resistência a impactos, luminescência para orientação no escuro. O Sub não é ornamento — é equipamento. Um equipamento que depois de 50 anos vale 10 vezes mais. WhatsApp.'}
+      ]},
+    {name:'Tudor',origin:'🇨🇭 Genebra, Suíça',url:'https://www.tudorwatch.com',models:['Black Bay','Pelagos','Ranger','Heritage'],ticket:'R$ 7k–40k',ticketMin:7000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Navy SEAL',text:'A Marinha dos EUA e os mergulhadores da OTAN usaram Tudor Black Bay em missões reais. A mesma resistência do irmão Rolex, por menos da metade do preço. Temos vintage e modernos disponíveis. WhatsApp.'},
+        {label:'Custo-benefício',text:'Tudor é Rolex — literalmente, a mesma empresa, a mesma manufatura. Por décadas, foi o relógio "secreto" dos entendidos que queriam qualidade suíça sem o markup de marketing. Temos Black Bay vintage. WhatsApp.'}
+      ]},
+    {name:'Omega Seamaster',origin:'🇨🇭 Biel, Suíça',url:'https://www.omegawatches.com/watches/seamaster',models:['Diver 300M','Planet Ocean','300 Vintage','Ploprof'],ticket:'R$ 10k–60k',ticketMin:10000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'300M',text:'O Seamaster Diver 300M de 1993 surgiu no pulso de Pierce Brosnan em GoldenEye e virou o relógio de Bond para sempre. Temos exemplares vintage da referência original — os que realmente apareceram no cinema. WhatsApp.'},
+        {label:'Ploprof',text:'O Omega Ploprof foi criado para saturationdiving em plataformas de petróleo. Um relógio tão extremo que chocou a indústria em 1970. Horrível para uns, ícone absoluto para colecionadores. WhatsApp se você entende.'}
+      ]},
+    {name:'Blancpain',origin:'🇨🇭 Le Brassus, Suíça',url:'https://www.blancpain.com',models:['Fifty Fathoms','Aqua Lung','Bathyscaphe'],ticket:'R$ 20k–300k',ticketMin:20000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Fifty Fathoms',text:'O Blancpain Fifty Fathoms de 1953 foi o primeiro mergulhador moderno da história — criado para os comandos de elite da Marinha francesa. Antes do Sub, antes de todos. Temos exemplares raros dos anos 50 a 70. WhatsApp.'},
+        {label:'Alta Relojoaria',text:'Blancpain faz o que nenhum outro fabricante de dive watches faz: complicações de alta relojoaria — tourbillon, calendário perpétuo — dentro de um relógio à prova d\'água. Unicidade absoluta. WhatsApp.'}
+      ]},
+    {name:'Longines',origin:'🇨🇭 Saint-Imier, Suíça',url:'https://www.longines.com',models:['HydroConquest','Legend Diver','Avigation','Weems'],ticket:'R$ 3k–18k',ticketMin:3000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Legend Diver',text:'O Longines Legend Diver é a reinterpretação do mergulhador original de 1960 — com bisel interno giratório e tampa protetora. Um design único que nenhuma outra marca tem. Disponível em versões vintage e modernas. WhatsApp.'},
+        {label:'Qualidade',text:'Longines é suíça, é automática e começa abaixo de R$ 3.000. A relação qualidade-preço do setor. Temos Longines vintage dos anos 50 a 80 com movimentos restaurados — durabilidade de décadas garantida. WhatsApp.'}
+      ]},
+    {name:'Oris',origin:'🇨🇭 Hölstein, Suíça',url:'https://www.oris.ch',models:['Aquis','Divers Sixty-Five','ProDiver'],ticket:'R$ 5k–25k',ticketMin:5000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Divers 65',text:'O Oris Divers Sixty-Five é uma homenagem ao mergulhador original de 1965 — cúpula domed, números grandes, charme vintage com movimento automático moderno. Para quem quer estilo retrô sem abrir mão da confiabilidade. WhatsApp.'},
+        {label:'Independente',text:'A Oris é uma das últimas manufaturas verdadeiramente independentes da Suíça — sem grupo empresarial por trás. Relógios honestos, sem markup de marca, movimentos ETA de qualidade. Ótima entrada no mundo suíço. WhatsApp.'}
+      ]},
+    {name:'Bell & Ross',origin:'🇫🇷 Paris, França',url:'https://www.bellross.com',models:['BR 01','BR 03','BR-X1 Skeleton'],ticket:'R$ 10k–80k',ticketMin:10000,fb:true,vin:false,hot:false,
+      copies:[
+        {label:'Cockpit',text:'Bell & Ross criou o BR 01 para imitar exatamente os instrumentos do painel de um caça militar — quadrado, com 4 parafusos nos cantos. Um relógio que parece ter saído de um cockpit da OTAN. Temos disponíveis. WhatsApp.'},
+        {label:'Design',text:'Se você usa um Bell & Ross, não precisa explicar — quem entende já sabe. Um design funcional que virou status entre aviadores, engenheiros aeroespaciais e colecionadores de nicho. WhatsApp.'}
+      ]},
+    {name:'Doxa',origin:'🇨🇭 Le Locle, Suíça',url:'https://www.doxawatches.com',models:['SUB 300','SUB 200','SUB 600T'],ticket:'R$ 5k–20k',ticketMin:5000,fb:false,vin:true,hot:false,
+      copies:[
+        {label:'Submarinistas',text:'Jacques Cousteau aprovou o Doxa SUB 300 para seus mergulhadores. O laranja da Doxa tornou-se cor icônica da exploração subaquática dos anos 60. Hoje é cult entre colecionadores sérios. WhatsApp.'},
+        {label:'Cult',text:'Doxa não é famosa — e é exatamente por isso que entendidos a colecionam. Preço acessível, história real, design autêntico dos anos 60. Uma das melhores apostas do mercado vintage hoje. WhatsApp.'}
+      ]}
+  ]
+},
+{
+  id:'vintage',emoji:'⏱',name:'Vintage Puro',sub:'Décadas de Ouro 1950–1990',
+  ticket:'R$ 600–80k',ticketRange:'entrada',
+  description:'Relógios dos anos 1950–1990, o período de ouro da relojoaria mundial. Patinas únicas, mostradores tropicais — cada imperfeição conta uma história.',
+  stats:[{val:'30–60',lbl:'Faixa etária'},{val:'82%H',lbl:'Gênero'},{val:'B / B+',lbl:'Perfil'},{val:'8+',lbl:'FB Ads marcas'}],
+  persona:{avatar:'DG',bg:'#1a1208',name:'Douglas G., 45',role:'Colecionador · Garimpeiro · Pesquisador',renda:'R$ 10k–40k/mês',age:'30–60 anos',location:'Todo o Brasil',device:'Android / iPhone',
+    behaviors:['Acompanha leilões e brechós','Membro de grupos WhatsApp especializados','Compra e vende frequentemente'],
+    motivations:['História e autenticidade','Thrill do garimpo','Valor de raridade','Comunidade e pertencimento']},
+  fbInterests:['vintage watches','colecionismo','antiguidades','Heuer vintage','leilão de arte','Universal Genève'],
+  fbBehaviors:['Compradores em marketplace','Colecionadores','Interessados em arte e antiguidades'],
+  fbPriority:'med',
+  brands:[
+    {name:'Universal Genève',origin:'🇨🇭 Genebra, Suíça',url:'https://www.universalgeneve.com',models:['Tri-Compax','Polerouter','Compax'],ticket:'R$ 5k–80k',ticketMin:5000,fb:false,vin:true,hot:true,
+      copies:[
+        {label:'Tri-Compax',text:'O Tri-Compax da Universal Genève é um dos tri-calendários mais bonitos já feitos — fase da lua, dia, data e mês num mostrador impecável dos anos 50. A UG foi descontinuada, o que torna cada peça um objeto finito. WhatsApp.'},
+        {label:'Polerouter',text:'O UG Polerouter foi criado para o primeiro voo polar da SAS em 1954. Design mid-century moderno, automático, raríssimo. Temos exemplares originais com cadeia completa de custódia. WhatsApp agora.'}
+      ]},
+    {name:'Heuer (pré-TAG)',origin:'🇨🇭 Biel, Suíça',url:'https://www.tagheuer.com/en/watchmaking/heuer-heritage',models:['Carrera','Monaco','Autavia','Silverstone'],ticket:'R$ 8k–200k',ticketMin:8000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Monaco',text:'O Heuer Monaco ref. 1133B é O relógio de Steve McQueen. Quadrado, azul, contra-intuitivo — e o mais procurado cronógrafo vintage do mercado. Temos uma referência disponível agora. WhatsApp imediato.'},
+        {label:'Autavia',text:'O Autavia foi nomeado pela Auto+Aviation, criado para pilotos de rali e aviadores nos anos 60. Jo Siffert o usou na Fórmula 1. Cronógrafo com história real de velocidade. Temos exemplares. WhatsApp.'}
+      ]},
+    {name:'Longines Vintage',origin:'🇨🇭 Saint-Imier, Suíça',url:'https://www.longines.com/heritage',models:['Conquest','Ultra-Chron','Flagship','Nonius'],ticket:'R$ 1,5k–20k',ticketMin:1500,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Ultra-Chron',text:'O Longines Ultra-Chron de 1968 batia a mais alta frequência de seu tempo — 36.000 bph. Um cronômetro de precisão cirúrgica que se parece um joalheiro art déco. Temos exemplares restaurados dos anos 60. WhatsApp.'},
+        {label:'Entrada',text:'Quer entrar no mundo do vintage suíço por menos de R$ 2.000? Longines é sua resposta. Suíça, automática, décadas de qualidade. Temos mostradores cream, preto e dourado dos anos 50 a 70. WhatsApp.'}
+      ]},
+    {name:'Hamilton Vintage',origin:'🇺🇸 Lancaster, EUA',url:'https://www.hamiltonwatch.com/heritage',models:['Khaki','Intra-Matic','Ventura','Pulsar'],ticket:'R$ 1k–12k',ticketMin:1000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Ventura',text:'O Hamilton Ventura de 1957 foi o primeiro relógio elétrico do mundo — e Elvis Presley o usou no filme Blue Hawaii. Forma triangular única, nunca copiada. Um ícone americano. Temos originais dos anos 60. WhatsApp.'},
+        {label:'Khaki',text:'O Hamilton Khaki foi o relógio oficial das forças armadas americanas na Segunda Guerra. Mostrador preto fosco, numerais árabes claros, resistência sem vaidade. Colecionismo com história de guerra. WhatsApp.'}
+      ]},
+    {name:'Tissot Vintage',origin:'🇨🇭 Le Locle, Suíça',url:'https://www.tissotwatches.com/heritage',models:['Seastar','Sideral','PR516','Navigator'],ticket:'R$ 800–8k',ticketMin:800,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Seastar',text:'O Tissot Seastar dos anos 60 é um dos mergulhadores vintage mais subestimados do mercado — suíço, automático, mostrador vibrante. Hoje colecionadores sérios pagam caro por exemplares originais. Temos. WhatsApp.'},
+        {label:'Acessível',text:'Tissot vintage dos anos 50 a 70 com movimento automático suíço, por R$ 800 a R$ 3.000. A porta de entrada mais elegante para o vintage europeu. Temos exemplares revisados e funcionando. WhatsApp.'}
+      ]},
+    {name:'Movado Vintage',origin:'🇨🇭 La Chaux-de-Fonds, Suíça',url:'https://www.movado.com',models:['Museum','Triple Calendar','Datron'],ticket:'R$ 800–10k',ticketMin:800,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Museum Dial',text:'O Movado Museum Dial foi criado por um artista do Bauhaus em 1947 — só um ponto de ouro às 12h para indicar o meio-dia. Design radical que está hoje no MoMA de Nova York. Vintage original dos anos 60. WhatsApp.'},
+        {label:'Triple Calendar',text:'Os calendários triplos Movado dos anos 40 e 50 — data, dia, mês e fase da lua — são joias mecânicas que poucos fabricantes conseguiam produzir naquela era. Peças raras com patina genuína. WhatsApp.'}
+      ]},
+    {name:'Enicar Vintage',origin:'🇨🇭 Lengnau, Suíça',url:'https://www.enicar.ch',models:['Sherpa','Ultrasonic','Jet Graph'],ticket:'R$ 600–6k',ticketMin:600,fb:false,vin:true,hot:false,
+      copies:[
+        {label:'Sherpa',text:'O Enicar Sherpa foi usado na expedição que escalou o Everest em 1956. Um relógio suíço que sobreviveu ao teto do mundo. A marca foi extinta — cada Sherpa original é objeto finito. WhatsApp.'},
+        {label:'Garimpo',text:'Enicar é o tipo de marca que só colecionadores sérios conhecem. Movimento Felsa suíço, design robusto dos anos 60, preços ainda acessíveis. O garimpo ideal para quem quer peça rara antes dos preços explodirem. WhatsApp.'}
+      ]},
+    {name:'Bulova Vintage',origin:'🇺🇸 Nova York, EUA',url:'https://www.bulova.com',models:['Accutron','Computron','Oceanographer'],ticket:'R$ 400–5k',ticketMin:400,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Accutron',text:'O Bulova Accutron de 1960 foi o primeiro relógio eletrônico de produção em massa — sem mola, sem balanço, só um diapasão vibrando. A NASA usou na nave Ranger VII. Um pedaço genuíno da história espacial. WhatsApp.'},
+        {label:'Computron',text:'O Bulova Computron de 1976 com janelas de LED vermelho foi a visão futurista do que os relógios deveriam ser. Hoje é objeto cult da estética sci-fi dos anos 70. Temos exemplares funcionando. WhatsApp.'}
+      ]}
+  ]
+},
+{
+  id:'japones',emoji:'🇯🇵',name:'Japonesas',sub:'Precisão & Confiabilidade',
+  ticket:'R$ 400–80k',ticketRange:'entrada',
+  description:'As manufaturas japonesas reinventaram a qualidade acessível. Com movimentos in-house, materiais avançados e design elegante.',
+  stats:[{val:'22–45',lbl:'Faixa etária'},{val:'76%H',lbl:'Gênero'},{val:'B / C+',lbl:'Perfil'},{val:'6+',lbl:'FB Ads marcas'}],
+  persona:{avatar:'LT',bg:'#0a1218',name:'Lucas T., 29',role:'Engenheiro de TI · Entusiasta iniciante',renda:'R$ 5k–18k/mês',age:'22–42 anos',location:'Todo o Brasil + interior',device:'Android · iPhone',
+    behaviors:['Consome relojoaria no YouTube e Reddit','Pesquisa muito antes de comprar','Valoriza relação custo-benefício extrema'],
+    motivations:['Porta de entrada no hobby','Movimento automático fascinante','Precisão japonesa','Comunidade WIS']},
+  fbInterests:['Seiko','Grand Seiko','Citizen','Orient','G-Shock','tecnologia','gadgets premium'],
+  fbBehaviors:['Fãs de tecnologia','Entusiastas de gadgets','Jovens profissionais'],
+  fbPriority:'med',
+  brands:[
+    {name:'Seiko',origin:'🇯🇵 Tóquio, Japão',url:'https://www.seikowatches.com',models:['Prospex (Diver)','5 Sports','Presage','Alpinist','King Seiko'],ticket:'R$ 600–40k',ticketMin:600,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Alpinist',text:'O Seiko Alpinist foi criado nos anos 60 para montanhistas japoneses — mostrador verde ou marrom, bússola interna, resistência extrema. Hoje é o relógio favorito de entendidos que evitam hype. Vintage dos anos 60 a 90. WhatsApp.'},
+        {label:'Diver Vintage',text:'O Seiko 6105 foi o relógio de guerra do Vietnam — os soldados americanos compravam em Tóquio antes de embarcar. Resistência real, movimento confiável, custo 10% do que um Rolex Sub. Temos exemplares originais. WhatsApp.'}
+      ]},
+    {name:'Grand Seiko',origin:'🇯🇵 Shizukuishi, Japão',url:'https://www.grand-seiko.com',models:['Spring Drive','Snowflake','SBGA','Hi-Beat'],ticket:'R$ 12k–150k',ticketMin:12000,fb:true,vin:false,hot:true,
+      copies:[
+        {label:'Snowflake',text:'O Snowflake da Grand Seiko (SBGA211) tem um mostrador que imita a textura de neve numa floresta japonesa de inverno. Zero marcas de hype — apenas artesanato invisível ao olho despreparado. Para colecionadores sérios. WhatsApp.'},
+        {label:'Spring Drive',text:'O Spring Drive da Grand Seiko é o único movimento que combina mecânica analógica com precisão digital — inventado só depois de 28 anos de pesquisa. Mais preciso que 99% dos suíços. Temos disponíveis. WhatsApp.'}
+      ]},
+    {name:'Citizen',origin:'🇯🇵 Tóquio, Japão',url:'https://www.citizenwatch.com',models:['Promaster','Eco-Drive','Tsuyosa','Attesa'],ticket:'R$ 500–15k',ticketMin:500,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Eco-Drive',text:'O Citizen Eco-Drive funciona com qualquer fonte de luz — sol, lâmpada, tela de celular. Nunca troca bateria, nunca para, precisa só de luz. Tecnologia japonesa que a Suíça não tem. Disponível novos e vintage. WhatsApp.'},
+        {label:'Promaster',text:'O Citizen Promaster é o instrumento japonês de sobrevivência — versões para mergulho (300m), aviação (GPS solar) e campo. Função real, preço justo. Temos modelos novos e vintage dos anos 90. WhatsApp.'}
+      ]},
+    {name:'Casio G-Shock',origin:'🇯🇵 Tóquio, Japão',url:'https://www.gshock.com',models:['DW-5600','GA-2100','GWG Mudmaster','DW-6900'],ticket:'R$ 400–5k',ticketMin:400,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Original DW-5600',text:'O DW-5600 é o G-Shock original de 1983 — criado depois que um engenheiro da Casio deixou cair seu relógio e prometeu fazer um que não quebrasse. 40 anos depois, virou ícone de streetwear e colecionismo. Vintage disponíveis. WhatsApp.'},
+        {label:'Cult',text:'O G-Shock dos anos 80 e 90 com displays de LED vintage é hoje item de colecionismo sério. O mesmo relógio que usava na escola pode valer 5x mais agora. Temos exemplares raros originais. WhatsApp antes que alguém leve.'}
+      ]},
+    {name:'Orient',origin:'🇯🇵 Tóquio, Japão',url:'https://www.orient-watch.com',models:['Bambino','Mako','Ray','Star'],ticket:'R$ 600–4k',ticketMin:600,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Bambino',text:'O Orient Bambino é o relógio automático mais bonito que você pode comprar por menos de R$ 1.000. Movimento in-house japonês, mostrador vintage inspirado nos anos 50, acabamento que envergonha muitos suíços do dobro do preço. WhatsApp.'},
+        {label:'Mako',text:'O Orient Mako é o mergulhador que qualquer pessoa pode ter — 200m de resistência, automático, japonês. A porta de entrada mais séria do mundo do Sport Watch. Novos e vintage dos anos 90. WhatsApp.'}
+      ]},
+    {name:'Pulsar Vintage',origin:'🇯🇵 Japão',url:'https://www.pulsarwatches.com',models:['P2 (LED)','Chronograph','Day-Date'],ticket:'R$ 300–3k',ticketMin:300,fb:false,vin:true,hot:false,
+      copies:[
+        {label:'LED Original',text:'O Pulsar P2 de 1972 foi o primeiro relógio digital eletrônico do mundo. Quando você apertava o botão, números vermelho neon acendiam — era o futuro em forma de relógio. Um artefato tecnológico real. Temos funcionando. WhatsApp.'},
+        {label:'Retro-Futurismo',text:'Pulsar LED dos anos 70 é o melhor presente para quem ama design retro-futurista. Objeto de arte tecnológica que realmente funciona, por um preço ainda acessível. Temos exemplares raros. WhatsApp.'}
+      ]}
+  ]
+},
+{
+  id:'moda',emoji:'👗',name:'Moda & Fashion',sub:'Lifestyle e Identidade',
+  ticket:'R$ 600–40k',ticketRange:'entrada',
+  description:'Relógios como extensão da identidade pessoal. Grandes maisons de moda trouxeram design sofisticado e apelo aspiracional.',
+  stats:[{val:'22–45',lbl:'Faixa etária'},{val:'58%F',lbl:'Gênero'},{val:'B / C+',lbl:'Perfil'},{val:'8+',lbl:'FB Ads marcas'}],
+  persona:{avatar:'MR',bg:'#1a0e16',name:'Marina R., 33',role:'Executiva de Marketing · Fashion Forward',renda:'R$ 6k–20k/mês',age:'22–45 anos',location:'SP, RJ, BH',device:'iPhone · iPad',
+    behaviors:['Segue influencers de moda e lifestyle','Compra em brechós de luxo','Usa Pinterest para inspiração'],
+    motivations:['Expressão de identidade','Complemento do outfit','Peça com história','Presentear com significado']},
+  fbInterests:['Cartier','moda vintage','slow fashion','brechó de luxo','Vogue Brasil','ELLE Brasil'],
+  fbBehaviors:['Compradoras fashion online','Seguidoras de influencers','Apreciadoras de lifestyle'],
+  fbPriority:'med',
+  brands:[
+    {name:'Cartier',origin:'🇫🇷 Paris, França',url:'https://www.cartier.com/watches',models:['Tank','Santos','Ballon Bleu','Panthère'],ticket:'R$ 10k–200k',ticketMin:10000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Tank',text:'O Tank Cartier foi usado por Jackie Kennedy, Yves Saint Laurent, Andy Warhol e Princess Diana. Não é moda — é atemporal. Temos Tanks vintage em ouro rosa e aço dos anos 70 a 90. Para quem não precisa de tendência. WhatsApp.'},
+        {label:'Panthère',text:'O Cartier Panthère dos anos 80 voltou — e quem tem um original vintage está à frente de todas que compraram a reediçao. Bracelete em malha dourada, design felino, elegância sem esforço. Temos originais. WhatsApp.'}
+      ]},
+    {name:'Gucci Timepieces',origin:'🇮🇹 Florença, Itália',url:'https://www.gucci.com/watches',models:['G-Timeless','Grip','Dive'],ticket:'R$ 5k–40k',ticketMin:5000,fb:true,vin:false,hot:false,
+      copies:[
+        {label:'G-Timeless',text:'O G-Timeless da Gucci leva o monograma mais reconhecido do mundo no pulso. Para quem quer o universo fashion diretamente visível no acessório. Disponibilidade limitada em nosso estoque. WhatsApp.'},
+        {label:'Dive',text:'A Gucci fazendo dive watch — com mostrador serpente e resistência a 200m — é o tipo de relógio que só a Itália consegue criar: absurdo e absolutamente maravilhoso ao mesmo tempo. WhatsApp.'}
+      ]},
+    {name:'Michael Kors',origin:'🇺🇸 Nova York, EUA',url:'https://www.michaelkors.com/watches',models:['Parker','Runway','Slim Runway'],ticket:'R$ 1k–5k',ticketMin:1000,fb:true,vin:false,hot:true,
+      copies:[
+        {label:'Runway',text:'O Michael Kors Runway com pulseira de malha e mostrador mother-of-pearl é o relógio que aparece em 80% das fotos de lookbook do Instagram brasileiro. Lifestyle americano num acessório. Temos novos e usados. WhatsApp.'},
+        {label:'Presente',text:'Quer presentear alguém que curte moda americana e look urbano? Michael Kors é a resposta certa para o Dia das Mães, aniversário ou Natal. Embalagem original, caixa nova. WhatsApp para ver modelos.'}
+      ]},
+    {name:'Fossil',origin:'🇺🇸 Richardson, Texas',url:'https://www.fossil.com/watches',models:['Townsman','Grant','Neutra','Heritage'],ticket:'R$ 700–4k',ticketMin:700,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Vintage Retrô',text:'O Fossil Townsman automático em couro marrom parece saído de um guarda-roupa dos anos 70 — mas tem data, é automático e custa menos de R$ 1.500. O visual vintage com praticidade moderna. WhatsApp.'},
+        {label:'Presente Masculino',text:'Para o homem que gosta de estilo vintage mas não quer gastar uma fortuna. Fossil automático com mostrador skeleton — você vê o mecanismo girando — por menos de R$ 2.000. WhatsApp para ver modelos.'}
+      ]},
+    {name:'Swatch',origin:'🇨🇭 Biel, Suíça',url:'https://www.swatch.com',models:['Sistem51','Big Bold','MoonSwatch','Irony'],ticket:'R$ 300–3k',ticketMin:300,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'MoonSwatch',text:'O MoonSwatch (collab Swatch × Omega) é o relógio que causou filas ao redor do mundo. Biocerâmica, design do Speedmaster, menos de R$ 1.500. Temos edições esgotadas disponíveis. WhatsApp antes que se esgotem de novo.'},
+        {label:'Colecionismo',text:'Swatch vintage dos anos 80 e 90 com edições especiais de artistas é hoje mercado de colecionismo sério. Alguns chegam a R$ 5.000+ em leilão. Temos edições raras originais com caixa. WhatsApp.'}
+      ]},
+    {name:'Daniel Wellington',origin:'🇸🇪 Estocolmo, Suécia',url:'https://www.danielwellington.com',models:['Classic Sheffield','Petite Melrose','Iconic Link'],ticket:'R$ 600–3k',ticketMin:600,fb:true,vin:false,hot:true,
+      copies:[
+        {label:'Clássico',text:'Daniel Wellington popularizou o relógio minimalista escandinavo — pulseira de NATO, mostrador limpo, preço acessível. Um look que combina com qualquer roupa. Temos modelos clássicos e com bracelete. WhatsApp.'},
+        {label:'Presente',text:'Um Daniel Wellington clássico é o presente de relógio mais seguro que existe — fica bem em qualquer pulso, masculino ou feminino, casual ou formal. Caixa original, garantia. WhatsApp.'}
+      ]},
+    {name:'Timex',origin:'🇺🇸 Middlebury, EUA',url:'https://www.timex.com',models:['Marlin','Waterbury','Q Timex','M79'],ticket:'R$ 300–2k',ticketMin:300,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Marlin',text:'O Timex Marlin dos anos 60 é o favorito dos editores de moda de Nova York — vintage americano autêntico por menos de R$ 600. Automático, mostrador cream, pulseira de couro. O relógio de quem entende de estilo sem precisar gastar muito. WhatsApp.'},
+        {label:'Q Timex',text:'O Q Timex é a reemissão do Track & Field de 1979 — mostrador colorido, rotativo bisel de mergulho, quartz japonês confiável. Cult entre streetwear, skate e fashion. Por menos de R$ 800 novo. WhatsApp.'}
+      ]},
+    {name:'Hermès Timepieces',origin:'🇫🇷 Paris, França',url:'https://www.hermes.com/watches',models:['Arceau','Cape Cod','H08'],ticket:'R$ 15k–200k',ticketMin:15000,fb:true,vin:false,hot:false,
+      copies:[
+        {label:'Arceau',text:'O Arceau da Hermès tem movimentos decorados como tecidos de sela — a arte equestre que fundou a maison em 1837 agora vive no mecanismo de um relógio. Para quem ama Hermès além das bolsas. WhatsApp.'},
+        {label:'Cape Cod',text:'O Cape Cod da Hermès tem pulseira dupla de couro que se dobra sobre o pulso — uma forma única que nenhuma outra marca tem. Um relógio que é imediatamente reconhecível como Hermès sem precisar de logo. WhatsApp.'}
+      ]}
+  ]
+},
+{
+  id:'alemao',emoji:'🇩🇪',name:'Alemãs & Glashütte',sub:'Engenharia & Minimalismo',
+  ticket:'R$ 3k–300k',ticketRange:'medio',
+  description:'A escola alemã de Glashütte produziu obras refinadas com rodiagem por 3/4 e movimentos hand-finished. Atraem o colecionador mais técnico.',
+  stats:[{val:'32–58',lbl:'Faixa etária'},{val:'86%H',lbl:'Gênero'},{val:'A / B+',lbl:'Perfil'},{val:'6+',lbl:'FB Ads marcas'}],
+  persona:{avatar:'BM',bg:'#0e1210',name:'Bruno M., 47',role:'Engenheiro · Arquiteto · Colecionador Técnico',renda:'R$ 20k–60k/mês',age:'32–58 anos',location:'SP, Curitiba, Porto Alegre',device:'iPhone · MacBook Pro',
+    behaviors:['Aprecia design funcional e minimalista','Conhece detalhes dos movimentos','Lê Hodinkee e Fratello diariamente'],
+    motivations:['Apreciação técnica do movimento','Design austero e honesto','Raridade e exclusividade','Patrimônio cultural alemão']},
+  fbInterests:['A. Lange & Söhne','NOMOS Glashütte','design bauhaus','Hodinkee','Fratello Watches'],
+  fbBehaviors:['Interessados em design','Leitores de publicações especializadas','Engenheiros e arquitetos'],
+  fbPriority:'low',
+  brands:[
+    {name:'Glashütte Original',origin:'🇩🇪 Glashütte, Alemanha',url:'https://www.glashuette-original.com',models:['Senator','PanoMaticLunar','SeaQ'],ticket:'R$ 10k–100k',ticketMin:10000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Manufatura',text:'A Glashütte Original foi reconstruída das cinzas da DDR em 1994. Cada relógio tem rodiagem por 3/4 em ouro, guilhoché feito à mão e decoração stripes de Glashütte — uma identidade visual que nenhuma suíça replica. WhatsApp.'},
+        {label:'PanoMaticLunar',text:'O PanoMaticLunar exibe horas, minutos e fase da lua num layout panorâmico único — tudo deslocado para criar espaço visual. Um relógio que parece diferente de qualquer outro existente. Disponível. WhatsApp.'}
+      ]},
+    {name:'NOMOS Glashütte',origin:'🇩🇪 Glashütte, Alemanha',url:'https://www.nomos-glashuette.com',models:['Tangente','Metro','Club Sport','Ahoi'],ticket:'R$ 6k–30k',ticketMin:6000,fb:true,vin:false,hot:true,
+      copies:[
+        {label:'Tangente',text:'O NOMOS Tangente tem um design Bauhaus tão puro que parece ter sido desenhado por uma régua e um compasso. Feito à mão em Glashütte com calibre próprio. Para quem entende que menos é mais, absolutamente. WhatsApp.'},
+        {label:'Entrada Alemã',text:'Quer alta relojoaria alemã sem pagar preço de A. Lange? NOMOS é sua resposta. Glashütte original, movimento in-house, design premiado — a R$ 6.000–15.000. O melhor custo-benefício da relojoaria alemã. WhatsApp.'}
+      ]},
+    {name:'Junghans',origin:'🇩🇪 Schramberg, Alemanha',url:'https://www.junghans.de',models:['max bill','Meister','Form'],ticket:'R$ 1k–12k',ticketMin:1000,fb:false,vin:true,hot:false,
+      copies:[
+        {label:'max bill',text:'O Junghans max bill foi desenhado pelo arquiteto suíço Max Bill — cofundador da Escola de Ulm, discípulo do Bauhaus. O relógio mais honesto que existe: só o necessário, nada mais. Um ícone do design funcional alemão. WhatsApp.'},
+        {label:'Meister',text:'O Junghans Meister dos anos 60 é o relógio de executivo alemão clássico — romano, mostrador creme, ponteiros dourados. Relojoaria alemã por menos de R$ 3.000, com história real. Temos vintage originais. WhatsApp.'}
+      ]},
+    {name:'Stowa',origin:'🇩🇪 Engelsbrand, Alemanha',url:'https://www.stowa.de',models:['Flieger','Marine Original','Antea'],ticket:'R$ 2k–15k',ticketMin:2000,fb:false,vin:true,hot:false,
+      copies:[
+        {label:'Flieger',text:'A Stowa produziu relógios de aviação para a Luftwaffe na Segunda Guerra — e hoje faz reproduções fiéis dos originais. O Flieger tem 3 tipos de fundo, numerais árabes claros, movimento automático alemão. Autenticidade sem compromisso. WhatsApp.'},
+        {label:'Nicho',text:'Stowa é a relojoaria alemã que os entendidos conhecem antes dos outros. Produção pequena, distribuição limitada, qualidade subestimada. Uma das melhores apostas de valor antes que o mercado a descubra. WhatsApp.'}
+      ]},
+    {name:'Maurice Lacroix',origin:'🇨🇭 Zurique, Suíça',url:'https://www.mauricelacroix.com',models:['Aikon','Eliros','Pontos','Masterpiece'],ticket:'R$ 4k–30k',ticketMin:4000,fb:true,vin:false,hot:false,
+      copies:[
+        {label:'Aikon',text:'O Maurice Lacroix Aikon é o relógio esportivo suíço com melhor relação qualidade-preço do mercado. Design angular inspirado no Royal Oak, por uma fração do preço. Movimento automático suíço. Disponível. WhatsApp.'},
+        {label:'Masterpiece',text:'O Masterpiece Skeleton da Maurice Lacroix mostra cada engrenagem, mola e balanço — um aquário mecânico no pulso. Relojoaria europeia artesanal por R$ 8.000–30.000. WhatsApp.'}
+      ]},
+    {name:'A. Lange & Söhne',origin:'🇩🇪 Glashütte, Alemanha',url:'https://www.alange-soehne.com',models:['Lange 1','Datograph','Zeitwerk','Saxonia'],ticket:'R$ 60k–500k',ticketMin:60000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Datograph',text:'O Datograph tem o cronógrafo a martelo mais celebrado da história — o golpe seco e preciso ao acionar o pusher é uma experiência sonora e tátil única. Manufatura alemã ao mais alto nível. Raríssimo no mercado. WhatsApp.'},
+        {label:'Lange 1',text:'O Lange 1 tem um display de hora fora do centro, grande data instantânea e subdial de segundos — um layout que choca à primeira vista e fascina para sempre. O relógio mais reconhecível da Alemanha. WhatsApp.'}
+      ]}
+  ]
+},
+{
+  id:'acessivel',emoji:'⌚',name:'Mid-Range & Acessível',sub:'Entrada no Hobby',
+  ticket:'R$ 400–12k',ticketRange:'entrada',
+  description:'O segmento que democratiza a relojoaria. Com R$ 600 a R$ 8k é possível ter um automático suíço ou japonês de altíssima qualidade.',
+  stats:[{val:'22–40',lbl:'Faixa etária'},{val:'70%H',lbl:'Gênero'},{val:'B / C',lbl:'Perfil'},{val:'7+',lbl:'FB Ads marcas'}],
+  persona:{avatar:'GT',bg:'#0e1a10',name:'Gabriel T., 26',role:'Analista · Jovem profissional · Iniciante',renda:'R$ 3k–12k/mês',age:'22–40 anos',location:'Todo o Brasil',device:'Android / iPhone',
+    behaviors:['Assiste YouTube sobre relógios','Compara preços no ML','Segue @ivuwbr e @watchtime_brasil'],
+    motivations:['Descoberta da relojoaria','Qualidade suíça/japonesa acessível','Movimento automático fascinante','Presente especial']},
+  fbInterests:['Tissot','Hamilton','Seiko','Longines','relojoaria','acessórios masculinos','Dia dos Pais'],
+  fbBehaviors:['Jovens profissionais','Compradores de médio valor','Interessados em relógios'],
+  fbPriority:'high',
+  brands:[
+    {name:'Tissot',origin:'🇨🇭 Le Locle, Suíça',url:'https://www.tissotwatches.com',models:['PRX','T-Race','Seastar 1000','Heritage','Le Locle'],ticket:'R$ 2k–12k',ticketMin:2000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'PRX',text:'O Tissot PRX é o Royal Oak para quem ainda não pode comprar um Royal Oak — inspiração óbvia, acabamento impecável, automático suíço. Viral no TikTok de relojoaria. Novos e vintage dos anos 70 disponíveis. WhatsApp.'},
+        {label:'Suíço Acessível',text:'Tissot é suíça, tem 170 anos de história e começa em R$ 2.000 com movimento automático. A entrada mais séria no mundo da relojoaria europeia. Temos novos e usados revisados. WhatsApp.'}
+      ]},
+    {name:'Hamilton',origin:'🇺🇸/🇨🇭 Suíça',url:'https://www.hamiltonwatch.com',models:['Khaki Field','Jazzmaster','Ventura','Intra-Matic'],ticket:'R$ 3k–15k',ticketMin:3000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Interstellar',text:'O Hamilton Murph apareceu em Interestelar — o relógio que cruzou dimensões do tempo com Cooper. Hoje é o sonho de fãs do filme e entusiastas de design. Temos o Murph e o Khaki automático. WhatsApp.'},
+        {label:'Americana',text:'Hamilton é a fusão perfeita: espírito americano com manufatura suíça. O Khaki Field usa toda a herança militar dos EUA num relógio automático por R$ 3.000. Temos novos e vintage originais. WhatsApp.'}
+      ]},
+    {name:'Longines',origin:'🇨🇭 Saint-Imier, Suíça',url:'https://www.longines.com',models:['HydroConquest','Master','Conquest Classic','Mini DolceVita'],ticket:'R$ 3k–18k',ticketMin:3000,fb:true,vin:true,hot:true,
+      copies:[
+        {label:'Elegância',text:'Longines tem 190 anos de história e foi o relógio oficial dos Jogos Olímpicos por décadas. Elegância suíça real sem o markup de marcas mais jovens. A R$ 3.000–8.000 você tem manufatura europeia centenária. WhatsApp.'},
+        {label:'DolceVita',text:'O Longines Mini DolceVita é o relógio retangular feminino mais elegante abaixo de R$ 10.000. Inspirado em Saint-Tropez dos anos 60 — sol, iate e classe. Novo e vintage disponíveis. WhatsApp.'}
+      ]},
+    {name:'Certina',origin:'🇨🇭 Grenchen, Suíça',url:'https://www.certina.com',models:['DS Action Diver','DS-1','DS Podium'],ticket:'R$ 2k–8k',ticketMin:2000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'DS Action',text:'O Certina DS Action Diver tem 300m de resistência à água, automático suíço e preço abaixo de R$ 3.000. A mesma manufatura que faz Tissot e Longines, com posicionamento mais agressivo. Excelente custo-benefício real. WhatsApp.'},
+        {label:'Suíço Honesto',text:'Certina é o relógio que engenheiros e médicos suíços usam — funcional, durável, sem ostentação. DS significa "Double Security": dupla vedação em todos os modelos. Para quem quer suíço de verdade. WhatsApp.'}
+      ]},
+    {name:'Mido',origin:'🇨🇭 Biel, Suíça',url:'https://www.midowatches.com',models:['Ocean Star','Baroncelli','Commander','Multifort'],ticket:'R$ 2k–8k',ticketMin:2000,fb:true,vin:true,hot:false,
+      copies:[
+        {label:'Baroncelli',text:'O Mido Baroncelli é inspirado pela arquitetura italiana de Milão — linhas limpas, mostrador clássico, automático suíço. Para quem quer um relógio de trabalho com identidade visual forte. WhatsApp.'},
+        {label:'Ocean Star',text:'O Mido Ocean Star 200m compete diretamente com modelos suíços que custam o dobro. Azul cerúleo, bisel cerâmica, movimento automático de alta qualidade. Disponível novo com garantia. WhatsApp.'}
+      ]},
+    {name:'Frederique Constant',origin:'🇨🇭 Genebra, Suíça',url:'https://www.frederiqueconstant.com',models:['Slimline','Classic Index','Highlife'],ticket:'R$ 3k–15k',ticketMin:3000,fb:true,vin:false,hot:false,
+      copies:[
+        {label:'Slimline',text:'O Frederique Constant Slimline Moonphase é um relógio de fase da lua por R$ 5.000 — algo que outras maisons cobram R$ 30.000+ por fazer. Manufatura própria, Genebra, acabamento impecável. WhatsApp.'},
+        {label:'Alta Relojoaria Acessível',text:'A Frederique Constant produz seus próprios movimentos em Genebra — algo que a maioria das marcas do preço deles não consegue. Alta relojoaria com o custo do mid-range. WhatsApp.'}
+      ]},
+    {name:'Victorinox',origin:'🇨🇭 Ibach, Suíça',url:'https://www.victorinox.com/watches',models:['INOX','Alliance','Journey 1884'],ticket:'R$ 1k–6k',ticketMin:1000,fb:true,vin:false,hot:false,
+      copies:[
+        {label:'INOX',text:'O Victorinox INOX passou por 130 testes de resistência — queda, pressão, temperatura, vibração, sal. Aprovado para uso militar e industrial. O relógio que não para nunca, por menos de R$ 3.000. WhatsApp.'},
+        {label:'Swiss Made',text:'Victorinox — a mesma empresa do canivete suíço — faz relógios com o mesmo DNA de confiabilidade centenária. Movimento suíço, qualidade real, preço justo. Ótima entrada para o universo Swiss Made. WhatsApp.'}
+      ]}
+  ]
+},
+{
+  id:'smart',emoji:'📱',name:'Smartwatch',sub:'Tecnologia Vestível',
+  ticket:'R$ 700–12k',ticketRange:'entrada',
+  description:'O mercado que revolucionou o pulso moderno. Healthtech, conectividade e design num só produto.',
+  stats:[{val:'18–40',lbl:'Faixa etária'},{val:'52%H',lbl:'Gênero'},{val:'B / C',lbl:'Perfil'},{val:'6+',lbl:'FB Ads marcas'}],
+  persona:{avatar:'CA',bg:'#0a1218',name:'Carolina A., 28',role:'Profissional de Tech · Fitness · Conectada',renda:'R$ 4k–15k/mês',age:'18–40 anos',location:'Todo o Brasil',device:'iPhone ou Android',
+    behaviors:['Monitora saúde pelo relógio','Pratica exercícios regularmente','Segue tendências tech'],
+    motivations:['Saúde e bem-estar','Conectividade','Integração com smartphone','Design moderno']},
+  fbInterests:['Apple Watch','Samsung Watch','Garmin','fitness','tecnologia','gadgets','wearables'],
+  fbBehaviors:['Compradores de tecnologia','Praticantes de fitness','Fãs de gadgets'],
+  fbPriority:'med',
+  brands:[
+    {name:'Apple Watch',origin:'🇺🇸 Cupertino, EUA',url:'https://www.apple.com/apple-watch',models:['Series 10','Ultra 2','SE 2'],ticket:'R$ 2k–12k',ticketMin:2000,fb:true,vin:false,hot:true,
+      copies:[
+        {label:'Ultra 2',text:'O Apple Watch Ultra 2 foi testado por alpinistas, triatletas e mergulhadores profissionais. Titânio, 60m de resistência, 36h de bateria em modo ultraperformance. Para quem vive o esporte de verdade. WhatsApp.'},
+        {label:'Saúde',text:'Eletrocardiograma, oxímetro, detecção de queda, ciclo menstrual, temperatura corporal — o Apple Watch Series 10 monitora mais indicadores de saúde que a maioria dos consultórios. Temos novos e semi-novos. WhatsApp.'}
+      ]},
+    {name:'Samsung Galaxy Watch',origin:'🇰🇷 Suwon, Coreia',url:'https://www.samsung.com/galaxy-watch',models:['Galaxy Watch 7','Ultra','FE'],ticket:'R$ 1k–5k',ticketMin:1000,fb:true,vin:false,hot:true,
+      copies:[
+        {label:'Android',text:'O Samsung Galaxy Watch 7 é o único smartwatch que concorre de verdade com o Apple Watch para usuários Android. Monitoramento de sono avançado, BioActive Sensor, integração total com Galaxy. WhatsApp.'},
+        {label:'Ultra',text:'O Samsung Galaxy Watch Ultra tem titânio e resistência a 10 ATM — construído para os que não ficam parados. Monitoramento de desempenho em esportes extremos, GPS dual frequency. WhatsApp.'}
+      ]},
+    {name:'Garmin',origin:'🇺🇸 Olathe, EUA',url:'https://www.garmin.com/watches',models:['Fenix 8','Forerunner','Vívoactive 5','Instinct 3'],ticket:'R$ 1k–8k',ticketMin:1000,fb:true,vin:false,hot:true,
+      copies:[
+        {label:'Fenix 8',text:'O Garmin Fenix 8 é o relógio dos triatletas de elite — GPS multifrequência preciso a centímetros, 29 dias de bateria, mapas topográficos integrados. Para quem treina com dados sérios. WhatsApp.'},
+        {label:'Forerunner',text:'O Garmin Forerunner é o relógio que corredores profissionais usam — pace médio, VO2 max, zonas de frequência cardíaca, previsão de corrida. Resultados que treinadores cobram R$ 300/mês para te dar. WhatsApp.'}
+      ]},
+    {name:'Withings',origin:'🇫🇷 Issy, França',url:'https://www.withings.com',models:['ScanWatch 2','ScanWatch Light','Steel HR'],ticket:'R$ 1k–5k',ticketMin:1000,fb:true,vin:false,hot:false,
+      copies:[
+        {label:'Híbrido',text:'O Withings ScanWatch parece um relógio clássico europeu — ponteiros reais, mostrador analógico — mas mede ECG, apneia do sono e satO2. A tecnologia invisível. Para quem quer smartwatch sem parecer nerd. WhatsApp.'},
+        {label:'Saúde Discreta',text:'O Withings Steel HR monitora coração 24h com um design que ninguém identifica como smartwatch. 25 dias de bateria, app de saúde completo. Para quem quer dados sem chamar atenção. WhatsApp.'}
+      ]},
+    {name:'TAG Heuer Connected',origin:'🇨🇭 La Chaux-de-Fonds, Suíça',url:'https://www.tagheuer.com/connected',models:['Calibre E4 45mm','Golf Edition'],ticket:'R$ 10k–30k',ticketMin:10000,fb:true,vin:false,hot:false,
+      copies:[
+        {label:'Luxo Conectado',text:'O TAG Heuer Connected tem acabamento de relógio suíço real — safira, titânio, pulseira de borracha premium — com Wear OS por dentro. Para executivos que querem a melhor versão dos dois mundos. WhatsApp.'},
+        {label:'Golf',text:'A edição Golf do TAG Connected tem caderno de campo digital dos 40.000 campos mais famosos do mundo, GPS hole-by-hole e análise de swing. O smartwatch mais exclusivo para golfistas sérios. WhatsApp.'}
+      ]},
+    {name:'Fitbit',origin:'🇺🇸 San Francisco, EUA',url:'https://www.fitbit.com',models:['Versa 4','Sense 2','Charge 6'],ticket:'R$ 700–3k',ticketMin:700,fb:true,vin:false,hot:false,
+      copies:[
+        {label:'Sense 2',text:'O Fitbit Sense 2 é a escolha de médicos para monitorar estresse — sensor eletrodérmico, temperatura da pele, SpO2 e ECG. 6 dias de bateria. Para quem quer dados de saúde sem pagar preço Apple. WhatsApp.'},
+        {label:'Presente',text:'Quer presentear alguém que está começando uma vida mais saudável? Fitbit Versa 4 — GPS, monitoramento de frequência cardíaca, sono e 40+ modos de exercício. O melhor custo-benefício em saúde vestível. WhatsApp.'}
+      ]}
+  ]
+}
 ];
 
-// ══════════════════════════════════════════════
-// TOAST
-// ══════════════════════════════════════════════
-function showToast(msg='✓ Copiado para a área de transferência!') {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2200);
-}
+// ═══════════════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════════════
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+function copyText(text,btn){navigator.clipboard.writeText(text).then(()=>{showToast('✓ Copiado!');if(btn){const o=btn.textContent;btn.textContent='✓ Copiado!';btn.classList.add('copied');setTimeout(()=>{btn.textContent=o;btn.classList.remove('copied')},2000)}})}
 
-function copyText(text, btn) {
-  navigator.clipboard.writeText(text).then(() => {
-    showToast();
-    if (btn) { const orig = btn.textContent; btn.textContent = '✓ Copiado!'; btn.classList.add('copied'); setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000); }
-  });
-}
-
-// ══════════════════════════════════════════════
-// BUILD HERO
-// ══════════════════════════════════════════════
-const heroCats = document.getElementById('hero-cats');
-catalog.forEach((cat, i) => {
-  const a = document.createElement('a'); a.className = 'hero-cat-pill'; a.href = '#' + cat.id;
-  a.textContent = cat.emoji + ' ' + cat.name;
-  a.addEventListener('click', e => { e.preventDefault(); showCatalogCat(i); document.getElementById('top-nav').scrollIntoView({behavior:'smooth'}); });
-  heroCats.appendChild(a);
+// ═══════════════════════════════════════════════════════════
+// BUILD HERO + NAV
+// ═══════════════════════════════════════════════════════════
+catalog.forEach((cat,i)=>{
+  const a=document.createElement('a');a.className='hero-cat-pill';a.href='#'+cat.id;
+  a.textContent=cat.emoji+' '+cat.name;
+  a.addEventListener('click',e=>{e.preventDefault();showCatalogCat(i);document.getElementById('top-nav').scrollIntoView({behavior:'smooth'})});
+  document.getElementById('hero-cats').appendChild(a);
+  const btn=document.createElement('button');btn.className='nav-btn'+(i===0?' active':'');
+  btn.textContent=cat.emoji+' '+cat.name;btn.addEventListener('click',()=>showCatalogCat(i));
+  document.getElementById('cat-nav-inner').appendChild(btn);
 });
 
-// ══════════════════════════════════════════════
-// BUILD NAV
-// ══════════════════════════════════════════════
-const navInner = document.getElementById('cat-nav-inner');
-catalog.forEach((cat, i) => {
-  const btn = document.createElement('button'); btn.className = 'nav-btn' + (i === 0 ? ' active' : '');
-  btn.textContent = cat.emoji + ' ' + cat.name;
-  btn.addEventListener('click', () => showCatalogCat(i));
-  navInner.appendChild(btn);
-});
+// ═══════════════════════════════════════════════════════════
+// BUILD BRAND CARD
+// ═══════════════════════════════════════════════════════════
+function buildBrandCard(b,catId){
+  const badges=[
+    b.fb?'<span class="badge badge-fb">FB Ads ✓</span>':'',
+    b.vin?'<span class="badge badge-vin">Vintage</span>':'',
+    b.hot?'<span class="badge badge-hot">🔥 BR</span>':''
+  ].join('');
+  const models=b.models.map(m=>`<span class="model-tag">${m}</span>`).join('');
+  const brandKey=catId+'__'+b.name.replace(/[^a-z0-9]/gi,'_');
+  const copiesTabs=b.copies.map((c,ci)=>`<button class="bcp-tab${ci===0?' active':''}" onclick="selectBrandCopy('${brandKey}',${ci},this)">${c.label}</button>`).join('');
+  const firstCopy=b.copies[0];
+  return `<div class="brand-card" data-name="${b.name.toLowerCase()}" data-models="${b.models.join(' ').toLowerCase()}" data-ticket-min="${b.ticketMin}">
+    <div class="brand-card-top">
+      <div class="brand-badges">${badges}</div>
+      <div class="brand-name">${b.name}</div>
+      <div class="brand-origin">${b.origin}</div>
+      <a class="brand-url-link" href="${b.url}" target="_blank" rel="noopener">${b.url.replace('https://','')}</a>
+      <div class="brand-models">${models}</div>
+    </div>
+    <div class="brand-footer">
+      <span class="brand-ticket">${b.ticket}</span>
+      <button class="brand-copies-btn" id="bcbtn-${brandKey}" onclick="toggleBrandCopies('${brandKey}')">💬 Copies</button>
+    </div>
+    <div class="brand-copies-panel" id="bcp-${brandKey}">
+      <div class="bcp-tabs">${copiesTabs}</div>
+      <div class="bcp-text" id="bctext-${brandKey}">${firstCopy.text}</div>
+      <div class="bcp-actions">
+        <button class="copy-btn" onclick="copyBrandCopy('${brandKey}',this)">📋 Copiar</button>
+        <a class="wa-send-btn" id="bcwa-${brandKey}" href="https://wa.me/?text=${encodeURIComponent(firstCopy.text)}" target="_blank">📲 WhatsApp</a>
+      </div>
+    </div>
+  </div>`;
+}
 
-// ══════════════════════════════════════════════
+// Store brand copies for JS access
+const brandCopiesStore={};
+
+// ═══════════════════════════════════════════════════════════
 // BUILD SECTIONS
-// ══════════════════════════════════════════════
-const mainContent = document.getElementById('main-content');
-catalog.forEach((cat, idx) => {
-  const sec = document.createElement('section');
-  sec.className = 'cat-section' + (idx === 0 ? ' active' : '');
-  sec.id = 'sec-' + cat.id;
+// ═══════════════════════════════════════════════════════════
+const mainContent=document.getElementById('main-content');
+catalog.forEach((cat,idx)=>{
+  // Pre-store brand copies
+  cat.brands.forEach(b=>{
+    const key=cat.id+'__'+b.name.replace(/[^a-z0-9]/gi,'_');
+    brandCopiesStore[key]=b.copies;
+  });
 
-  const statsHtml = cat.stats.map(s => `<div class="stat-item"><div class="stat-val">${s.val}</div><div class="stat-lbl">${s.lbl}</div></div>`).join('');
-  const behavHtml = cat.persona.behaviors.map(b => `<span class="persona-tag">${b}</span>`).join('');
-  const motivHtml = cat.persona.motivations.map(m => `<span class="persona-tag motivation">${m}</span>`).join('');
-
-  const brandsHtml = cat.brands.map(b => {
-    const badges = [
-      b.fb ? '<span class="badge badge-fb">FB Ads ✓</span>' : '',
-      b.vin ? '<span class="badge badge-vin">Vintage</span>' : '',
-      b.hot ? '<span class="badge badge-hot">🔥 BR</span>' : '',
-    ].join('');
-    const models = b.models.map(m => `<span class="model-tag">${m}</span>`).join('');
-    return `<div class="brand-card" data-name="${b.name.toLowerCase()}" data-models="${b.models.join(' ').toLowerCase()}" data-ticket-min="${b.ticketMin}">
-      <div class="brand-img-wrap"><img class="brand-img" src="${IMG(b.img)}" alt="${b.name}" loading="lazy"><div class="brand-img-overlay"></div><div class="brand-badges">${badges}</div></div>
-      <div class="brand-body"><div class="brand-name">${b.name}</div><div class="brand-origin">${b.origin}</div><div class="brand-models">${models}</div>
-      <div class="brand-footer"><span class="brand-ticket">${b.ticket}</span></div></div>
-    </div>`;
-  }).join('');
-
-  // WhatsApp copies
-  const copiesSelectorHtml = cat.copies.map((c, ci) => `<button class="wa-copy-pill${ci===0?' active':''}" data-ci="${ci}" onclick="selectCopy(this,'${cat.id}',${ci})">${c.label}</button>`).join('');
-  const firstCopy = cat.copies[0];
-
-  // Build interests string for copy button
-  const interestsStr = cat.fbInterests.join(', ');
-  const behaviorsStr = cat.fbBehaviors.join('; ');
-
-  sec.innerHTML = `
+  const sec=document.createElement('section');
+  sec.className='cat-section'+(idx===0?' active':'');
+  sec.id='sec-'+cat.id;
+  const statsHtml=cat.stats.map(s=>`<div><div class="stat-val">${s.val}</div><div class="stat-lbl">${s.lbl}</div></div>`).join('');
+  const behavHtml=cat.persona.behaviors.map(b=>`<span class="persona-tag">${b}</span>`).join('');
+  const motivHtml=cat.persona.motivations.map(m=>`<span class="persona-tag motivation">${m}</span>`).join('');
+  const brandsHtml=cat.brands.map(b=>buildBrandCard(b,cat.id)).join('');
+  const interestsStr=cat.fbInterests.join(', ');
+  sec.innerHTML=`
     <div class="section-header">
-      <div class="section-info">
+      <div>
         <div class="section-eyebrow">${cat.emoji} &nbsp; Categoria ${String(idx+1).padStart(2,'0')}</div>
         <h2 class="section-title"><em>${cat.name}</em><br>${cat.sub}</h2>
         <p class="section-desc">${cat.description}</p>
@@ -799,340 +910,219 @@ catalog.forEach((cat, idx) => {
         <div class="persona-tags">${motivHtml}</div>
       </div>
     </div>
-
     <div class="brands-section-title">Marcas — ${cat.brands.length} mapeadas <span id="count-${cat.id}" style="color:var(--gold)"></span></div>
     <div class="brands-grid" id="grid-${cat.id}">${brandsHtml}</div>
     <div class="no-results" id="nores-${cat.id}">Nenhuma marca encontrada com esse filtro.</div>
-
-    <div class="fb-box">
-      <div class="fb-box-header">
-        <span class="fb-box-title">🎯 &nbsp; Interesses para FB Ads</span>
-        <button class="copy-btn" onclick="copyText('${interestsStr.replace(/'/g,"\\'")}', this)">📋 Copiar todos</button>
-      </div>
+    <div class="fb-box" style="margin-top:1.5rem">
+      <div class="fb-box-header"><span class="fb-box-title">🎯 &nbsp; Interesses para FB Ads</span><button class="copy-btn" onclick="copyText('${interestsStr.replace(/'/g,"\\'")}',this)">📋 Copiar todos</button></div>
       <div class="fb-interests-list">${cat.fbInterests.map(i=>`<span class="fb-interest-chip">${i}</span>`).join('')}</div>
       <div class="fb-behaviors-row"><strong>Comportamentos:</strong> ${cat.fbBehaviors.join(' · ')}</div>
-    </div>
-
-    <div class="wa-generator">
-      <div class="wa-generator-header" onclick="toggleWa('wa-body-${cat.id}', this)">
-        <span class="wa-generator-title">💬 &nbsp; Copies prontos para WhatsApp</span>
-        <span class="wa-generator-toggle">▼ Ver copies</span>
-      </div>
-      <div class="wa-generator-body" id="wa-body-${cat.id}">
-        <div class="wa-copy-selector" id="wa-sel-${cat.id}">${copiesSelectorHtml}</div>
-        <div class="wa-copy-text" id="wa-text-${cat.id}">${firstCopy.text}</div>
-        <div class="wa-copy-actions">
-          <button class="copy-btn" onclick="copyWa('${cat.id}', this)">📋 Copiar texto</button>
-          <a class="wa-send-btn" id="wa-link-${cat.id}" href="https://wa.me/?text=${encodeURIComponent(firstCopy.text)}" target="_blank">📲 Abrir no WhatsApp</a>
-        </div>
-      </div>
     </div>`;
-
-  // Store copies data
-  sec.dataset.copies = JSON.stringify(cat.copies);
   mainContent.appendChild(sec);
 });
 
-// ══════════════════════════════════════════════
-// WHATSAPP COPY
-// ══════════════════════════════════════════════
-function toggleWa(bodyId, header) {
-  const body = document.getElementById(bodyId);
-  body.classList.toggle('open');
-  const toggle = header.querySelector('.wa-generator-toggle');
-  toggle.textContent = body.classList.contains('open') ? '▲ Fechar' : '▼ Ver copies';
+// ═══════════════════════════════════════════════════════════
+// BRAND COPIES INTERACTION
+// ═══════════════════════════════════════════════════════════
+function toggleBrandCopies(key){
+  const panel=document.getElementById('bcp-'+key);
+  const btn=document.getElementById('bcbtn-'+key);
+  const open=panel.classList.toggle('open');
+  btn.classList.toggle('open',open);
+  btn.textContent=open?'✕ Fechar':'💬 Copies';
 }
-
-function selectCopy(btn, catId, ci) {
-  const sec = document.getElementById('sec-' + catId);
-  const copies = JSON.parse(sec.dataset.copies);
-  const copy = copies[ci];
-  document.getElementById('wa-text-' + catId).textContent = copy.text;
-  document.getElementById('wa-link-' + catId).href = 'https://wa.me/?text=' + encodeURIComponent(copy.text);
-  document.querySelectorAll(`#wa-sel-${catId} .wa-copy-pill`).forEach(p => p.classList.remove('active'));
-  btn.classList.add('active');
+function selectBrandCopy(key,ci,tabEl){
+  const copies=brandCopiesStore[key];
+  const copy=copies[ci];
+  document.getElementById('bctext-'+key).textContent=copy.text;
+  document.getElementById('bcwa-'+key).href='https://wa.me/?text='+encodeURIComponent(copy.text);
+  const panel=document.getElementById('bcp-'+key);
+  panel.querySelectorAll('.bcp-tab').forEach(t=>t.classList.remove('active'));
+  tabEl.classList.add('active');
 }
+function copyBrandCopy(key,btn){copyText(document.getElementById('bctext-'+key).textContent,btn)}
 
-function copyWa(catId, btn) {
-  const text = document.getElementById('wa-text-' + catId).textContent;
-  copyText(text, btn);
-}
-
-// ══════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════
 // FB TABLE
-// ══════════════════════════════════════════════
-function buildFbTable(filter = 'all') {
-  const tbody = document.getElementById('fb-table-body');
-  const prio = { high:['priority-high','🔥 Alta'], med:['priority-med','⚡ Média'], low:['priority-low','· Baixa'] };
-  tbody.innerHTML = catalog.filter(c => filter === 'all' || c.ticketRange === filter).map(cat => {
-    const [cls, label] = prio[cat.fbPriority];
-    const interests = cat.fbInterests.map(i => `<span class="interest-tag">${i}</span>`).join('');
-    const interestsStr = cat.fbInterests.join(', ');
-    return `<tr>
-      <td><span style="font-size:1.1rem">${cat.emoji}</span> <strong>${cat.name}</strong><br><span style="font-size:10px;color:var(--muted)">${cat.sub}</span></td>
+// ═══════════════════════════════════════════════════════════
+function buildFbTable(filter='all'){
+  const tbody=document.getElementById('fb-table-body');
+  const prio={high:['priority-high','🔥 Alta'],med:['priority-med','⚡ Média'],low:['priority-low','· Baixa']};
+  tbody.innerHTML=catalog.filter(c=>filter==='all'||c.ticketRange===filter).map(cat=>{
+    const[cls,label]=prio[cat.fbPriority];
+    const str=cat.fbInterests.join(', ');
+    return`<tr><td><span style="font-size:1.1rem">${cat.emoji}</span> <strong>${cat.name}</strong><br><span style="font-size:10px;color:var(--muted)">${cat.sub}</span></td>
       <td style="font-family:'Cormorant Garamond',serif;color:var(--gold)">${cat.ticket}</td>
-      <td><div class="interest-tags" style="margin-bottom:6px">${interests}</div>
-          <button class="fb-table-copy-btn" onclick="copyText('${interestsStr.replace(/'/g,"\\'")}',this)">📋 Copiar interesses</button></td>
+      <td><div class="interest-tags" style="margin-bottom:6px">${cat.fbInterests.map(i=>`<span class="interest-tag">${i}</span>`).join('')}</div>
+          <button class="fb-table-copy-btn" onclick="copyText('${str.replace(/'/g,"\\'")}',this)">📋 Copiar</button></td>
       <td style="font-size:11px;color:var(--muted);line-height:1.8">${cat.fbBehaviors.join('<br>')}</td>
-      <td><span class="priority ${cls}">${label}</span></td>
-    </tr>`;
+      <td><span class="priority ${cls}">${label}</span></td></tr>`;
   }).join('');
 }
 buildFbTable();
+function filterFbTable(el,range){document.querySelectorAll('.ticket-chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');buildFbTable(range)}
 
-function filterFbTable(el, range) {
-  document.querySelectorAll('.ticket-chip').forEach(c => c.classList.remove('active'));
-  el.classList.add('active');
-  buildFbTable(range);
-}
-
-// ══════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════
 // COMPARADOR
-// ══════════════════════════════════════════════
-['compare-a','compare-b'].forEach((id, i) => {
-  const sel = document.getElementById(id);
-  catalog.forEach((cat, j) => {
-    const opt = document.createElement('option');
-    opt.value = j; opt.textContent = cat.emoji + ' ' + cat.name;
-    if (j === i) opt.selected = true;
-    sel.appendChild(opt);
-  });
+// ═══════════════════════════════════════════════════════════
+['compare-a','compare-b'].forEach((id,i)=>{
+  const sel=document.getElementById(id);
+  catalog.forEach((cat,j)=>{const opt=document.createElement('option');opt.value=j;opt.textContent=cat.emoji+' '+cat.name;if(j===i)opt.selected=true;sel.appendChild(opt)});
 });
-
-function buildCompareCol(cat, colId) {
-  const col = document.getElementById(colId);
-  const prio = {high:'🔥 Alta prioridade BR', med:'⚡ Prioridade média', low:'· Baixa prioridade'};
-  col.innerHTML = `
-    <div class="compare-col-header">
-      <div class="compare-col-emoji">${cat.emoji}</div>
-      <div class="compare-col-name">${cat.name}</div>
-      <div class="compare-col-sub">${cat.sub}</div>
+function buildCompareCol(cat,colId){
+  const col=document.getElementById(colId);
+  const prio={high:'🔥 Alta prioridade BR',med:'⚡ Prioridade média',low:'· Baixa prioridade'};
+  col.innerHTML=`<div class="compare-col-header"><div class="compare-col-emoji">${cat.emoji}</div><div class="compare-col-name">${cat.name}</div><div class="compare-col-sub">${cat.sub}</div></div>
+  <div class="compare-col-body">
+    <div class="compare-section"><div class="compare-section-label">Persona</div>
+      <div class="compare-row"><span class="compare-row-key">Nome</span><span class="compare-row-val">${cat.persona.name}</span></div>
+      <div class="compare-row"><span class="compare-row-key">Renda</span><span class="compare-row-val">${cat.persona.renda}</span></div>
+      <div class="compare-row"><span class="compare-row-key">Idade</span><span class="compare-row-val">${cat.persona.age}</span></div>
+      <div class="compare-row"><span class="compare-row-key">Ticket</span><span class="compare-row-val" style="color:var(--gold)">${cat.ticket}</span></div>
     </div>
-    <div class="compare-col-body">
-      <div class="compare-section">
-        <div class="compare-section-label">Persona</div>
-        <div class="compare-row"><span class="compare-row-key">Nome</span><span class="compare-row-val">${cat.persona.name}</span></div>
-        <div class="compare-row"><span class="compare-row-key">Renda</span><span class="compare-row-val">${cat.persona.renda}</span></div>
-        <div class="compare-row"><span class="compare-row-key">Idade</span><span class="compare-row-val">${cat.persona.age}</span></div>
-        <div class="compare-row"><span class="compare-row-key">Ticket</span><span class="compare-row-val" style="color:var(--gold)">${cat.ticket}</span></div>
-      </div>
-      <div class="compare-section">
-        <div class="compare-section-label">Facebook Ads</div>
-        <div class="compare-row"><span class="compare-row-key">Prioridade BR</span><span class="compare-row-val">${prio[cat.fbPriority]}</span></div>
-        <div style="margin-top:.5rem"><div class="compare-row-key" style="margin-bottom:.4rem">Interesses</div><div class="compare-tags">${cat.fbInterests.map(i=>`<span class="compare-tag">${i}</span>`).join('')}</div></div>
-      </div>
-      <div class="compare-section">
-        <div class="compare-section-label">Motivações</div>
-        <div class="compare-tags">${cat.persona.motivations.map(m=>`<span class="compare-tag" style="border-color:rgba(201,169,110,.3);color:var(--gold)">${m}</span>`).join('')}</div>
-      </div>
-      <div class="compare-section">
-        <div class="compare-section-label">Comportamentos</div>
-        ${cat.persona.behaviors.map(b=>`<div style="font-size:11px;color:var(--muted);padding:3px 0;border-bottom:1px solid rgba(201,169,110,.05)">· ${b}</div>`).join('')}
-      </div>
-    </div>`;
+    <div class="compare-section"><div class="compare-section-label">Facebook Ads</div>
+      <div class="compare-row"><span class="compare-row-key">Prioridade BR</span><span class="compare-row-val">${prio[cat.fbPriority]}</span></div>
+      <div style="margin-top:.5rem"><div class="compare-row-key" style="margin-bottom:.4rem">Interesses</div><div class="compare-tags">${cat.fbInterests.map(i=>`<span class="compare-tag">${i}</span>`).join('')}</div></div>
+    </div>
+    <div class="compare-section"><div class="compare-section-label">Motivações</div>
+      <div class="compare-tags">${cat.persona.motivations.map(m=>`<span class="compare-tag" style="border-color:rgba(201,169,110,.3);color:var(--gold)">${m}</span>`).join('')}</div>
+    </div>
+    <div class="compare-section"><div class="compare-section-label">Comportamentos</div>
+      ${cat.persona.behaviors.map(b=>`<div style="font-size:11px;color:var(--muted);padding:3px 0;border-bottom:1px solid rgba(201,169,110,.05)">· ${b}</div>`).join('')}
+    </div>
+  </div>`;
 }
-function updateComparator() {
-  buildCompareCol(catalog[+document.getElementById('compare-a').value], 'compare-col-a');
-  buildCompareCol(catalog[+document.getElementById('compare-b').value], 'compare-col-b');
-}
+function updateComparator(){buildCompareCol(catalog[+document.getElementById('compare-a').value],'compare-col-a');buildCompareCol(catalog[+document.getElementById('compare-b').value],'compare-col-b')}
 updateComparator();
 
-// ══════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════
 // GLOBAL SEARCH
-// ══════════════════════════════════════════════
-function globalSearch() {
-  const q = document.getElementById('global-search-input').value.toLowerCase().trim();
-  const resultsEl = document.getElementById('global-results');
-  if (!q) { resultsEl.innerHTML = '<div class="search-empty">Digite o nome de uma marca ou modelo.</div>'; return; }
-  const results = [];
-  catalog.forEach(cat => {
-    cat.brands.forEach(b => {
-      if ((b.name + ' ' + b.models.join(' ') + ' ' + b.origin).toLowerCase().includes(q))
-        results.push({cat, brand: b});
-    });
-  });
-  if (!results.length) { resultsEl.innerHTML = '<div class="search-empty">Nenhuma marca ou modelo encontrado.</div>'; return; }
-  resultsEl.innerHTML = `<div class="search-count">${results.length} resultado${results.length>1?'s':''}</div>` +
-    results.map(({cat, brand}) => `
-      <div class="search-result-item" onclick="goToCat('${cat.id}')">
-        <img class="search-result-img" src="${IMG(brand.img)}" alt="${brand.name}" loading="lazy">
-        <div style="flex:1">
-          <div class="search-result-cat">${cat.emoji} ${cat.name}</div>
-          <div class="search-result-name">${brand.name}</div>
-          <div class="search-result-models">${brand.models.join(' · ')}</div>
-        </div>
-        <div class="search-result-ticket">${brand.ticket}</div>
-      </div>`).join('');
+// ═══════════════════════════════════════════════════════════
+function globalSearch(){
+  const q=document.getElementById('global-search-input').value.toLowerCase().trim();
+  const res=document.getElementById('global-results');
+  if(!q){res.innerHTML='<div class="search-empty">Digite o nome de uma marca ou modelo.</div>';return}
+  const results=[];
+  catalog.forEach(cat=>cat.brands.forEach(b=>{if((b.name+' '+b.models.join(' ')).toLowerCase().includes(q))results.push({cat,b})}));
+  if(!results.length){res.innerHTML='<div class="search-empty">Nenhuma marca encontrada.</div>';return}
+  res.innerHTML=`<div class="search-count">${results.length} resultado${results.length>1?'s':''}</div>`+
+    results.map(({cat,b})=>`<div class="search-result-item" onclick="goToCat('${cat.id}')">
+      <div class="search-result-icon">${b.name[0]}</div>
+      <div style="flex:1"><div class="search-result-cat">${cat.emoji} ${cat.name}</div>
+        <div class="search-result-name">${b.name}</div>
+        <div class="search-result-models">${b.models.join(' · ')}</div></div>
+      <div class="search-result-ticket">${b.ticket}</div></div>`).join('');
 }
+function goToCat(catId){const idx=catalog.findIndex(c=>c.id===catId);if(idx>=0)showCatalogCat(idx)}
 
-function goToCat(catId) {
-  const idx = catalog.findIndex(c => c.id === catId);
-  if (idx >= 0) showCatalogCat(idx);
-}
-
-// ══════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════
 // BRAND FILTER
-// ══════════════════════════════════════════════
-let activeTicketFilter = 'all';
-function setTicketFilter(el, range) {
-  activeTicketFilter = range;
-  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-  el.classList.add('active');
-  filterBrands();
-}
-function filterBrands() {
-  const q = (document.getElementById('catalog-search-input')?.value || '').toLowerCase().trim();
-  const activeSec = document.querySelector('.cat-section.active');
-  if (!activeSec) return;
-  const cards = activeSec.querySelectorAll('.brand-card');
-  const ranges = {'all':[0,Infinity],'0-5000':[0,5000],'5000-30000':[5000,30000],'30000-999999':[30000,Infinity]};
-  const [rMin, rMax] = ranges[activeTicketFilter] || [0, Infinity];
-  let visible = 0;
-  cards.forEach(card => {
-    const matchText = !q || card.dataset.name.includes(q) || card.dataset.models.includes(q);
-    const tMin = parseInt(card.dataset.ticketMin) || 0;
-    const matchTicket = tMin >= rMin && tMin < rMax;
-    const show = matchText && matchTicket;
-    card.classList.toggle('hidden', !show);
-    if (show) visible++;
+// ═══════════════════════════════════════════════════════════
+let activeTicketFilter='all';
+function setTicketFilter(el,range){activeTicketFilter=range;document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');filterBrands()}
+function filterBrands(){
+  const q=(document.getElementById('catalog-search-input')?.value||'').toLowerCase().trim();
+  const sec=document.querySelector('.cat-section.active');if(!sec)return;
+  const ranges={'all':[0,Infinity],'0-5000':[0,5000],'5000-30000':[5000,30000],'30000-999999':[30000,Infinity]};
+  const[rMin,rMax]=ranges[activeTicketFilter]||[0,Infinity];
+  let v=0;
+  sec.querySelectorAll('.brand-card').forEach(card=>{
+    const matchText=!q||card.dataset.name.includes(q)||card.dataset.models.includes(q);
+    const matchTicket=parseInt(card.dataset.ticketMin)||0;
+    const show=matchText&&matchTicket>=rMin&&matchTicket<rMax;
+    card.classList.toggle('hidden',!show);if(show)v++;
   });
-  const catId = activeSec.id.replace('sec-','');
-  const countEl = document.getElementById('count-' + catId);
-  const nores = document.getElementById('nores-' + catId);
-  if (countEl) countEl.textContent = (q || activeTicketFilter !== 'all') ? `· ${visible} exibida${visible!==1?'s':''}` : '';
-  if (nores) nores.classList.toggle('visible', visible === 0);
+  const catId=sec.id.replace('sec-','');
+  const ce=document.getElementById('count-'+catId);
+  const nr=document.getElementById('nores-'+catId);
+  if(ce)ce.textContent=(q||activeTicketFilter!=='all')?`· ${v} exibida${v!==1?'s':''}`:'' ;
+  if(nr)nr.classList.toggle('visible',v===0);
 }
 
-// ══════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════
+// PLANNER
+// ═══════════════════════════════════════════════════════════
+let plannerSelected=new Set(['alta','luxo']);
+function buildPlannerCheckboxes(){
+  const c=document.getElementById('planner-checkboxes');
+  const pm={high:['priority-high','🔥 Alta'],med:['priority-med','⚡ Média'],low:['priority-low','· Baixa']};
+  c.innerHTML=catalog.map(cat=>{const[cls,lbl]=pm[cat.fbPriority];const chk=plannerSelected.has(cat.id);
+    return`<div class="planner-checkbox-row" onclick="togglePlannerCat('${cat.id}')">
+      <div class="planner-checkbox${chk?' checked':''}" id="chk-${cat.id}"></div>
+      <div class="planner-checkbox-info"><div class="planner-checkbox-name">${cat.emoji} ${cat.name}</div><div class="planner-checkbox-sub">${cat.ticket}</div></div>
+      <span class="priority ${cls}" style="font-size:10px">${lbl}</span></div>`;}).join('');
+}
+function togglePlannerCat(id){if(plannerSelected.has(id))plannerSelected.delete(id);else plannerSelected.add(id);buildPlannerCheckboxes();updatePlanner()}
+function updatePlanner(){
+  const budget=parseInt(document.getElementById('budget-range').value);
+  const days=parseInt(document.getElementById('days-range').value);
+  const aud=parseInt(document.getElementById('audiences-range').value);
+  const obj=document.getElementById('objective-sel').value;
+  document.getElementById('budget-val').textContent=`R$ ${budget}/dia`;
+  document.getElementById('days-val').textContent=`${days} dias`;
+  document.getElementById('audiences-val').textContent=`${aud} público${aud>1?'s':''}`;
+  const total=budget*days,perPub=Math.round(budget/aud),imp=Math.round(total*50),clk=Math.round(total*1);
+  const cr=obj==='messages'?.03:.015;const cMin=Math.round(clk*cr),cMax=Math.round(clk*cr*2);
+  document.getElementById('kpi-total').textContent=`R$ ${total.toLocaleString('pt-BR')}`;
+  document.getElementById('kpi-per-pub').textContent=`R$ ${perPub}/dia`;
+  document.getElementById('kpi-days').textContent=`${days} dias`;
+  document.getElementById('kpi-pubs').textContent=aud;
+  document.getElementById('est-impressions').textContent=`~${imp.toLocaleString('pt-BR')}`;
+  document.getElementById('est-clicks').textContent=`~${clk.toLocaleString('pt-BR')}`;
+  document.getElementById('est-convs').textContent=`~${cMin}–${cMax}`;
+  const st={messages:`Recomendamos iniciar com <strong>${Math.min(aud,2)} público${Math.min(aud,2)>1?'s':''}</strong> de maior prioridade. Rode por 7 dias, analise CPR, pause o pior e reforce o vencedor.`,
+    traffic:`Para tráfego, use público amplo + retargeting de visitantes. 70% aquisição, 30% retargeting. Mínimo 10 dias para o algoritmo otimizar.`,
+    leads:`Use formulário nativo do Facebook com campo de WhatsApp. Anúncio de imagem + copy de urgência. Qualifique o lead via WhatsApp na sequência.`,
+    awareness:`Use formato de vídeo 15–30s mostrando os relógios. Meta: CPM baixo, frequência 3–5. Combine com campanha de tráfego após 7 dias.`};
+  document.getElementById('planner-strategy-text').innerHTML=st[obj];
+  const sel=catalog.filter(c=>plannerSelected.has(c.id));
+  document.getElementById('planner-selected-list').innerHTML=sel.length?sel.map(c=>`<div style="padding:4px 0;border-bottom:1px solid rgba(201,169,110,.06)"><span style="color:var(--gold-light)">${c.emoji} ${c.name}</span> <span style="font-size:11px;color:var(--muted)">— ${c.ticket}</span></div>`).join(''):'<span style="color:var(--muted)">Nenhum público selecionado.</span>';
+}
+function exportCSV(){
+  const sel=catalog.filter(c=>plannerSelected.has(c.id));
+  if(!sel.length){showToast('⚠️ Selecione ao menos um público');return}
+  const rows=[['Categoria','Ticket','Prioridade','Interesses FB Ads','Comportamentos']];
+  sel.forEach(c=>rows.push([c.name,c.ticket,c.fbPriority==='high'?'Alta':c.fbPriority==='med'?'Média':'Baixa',c.fbInterests.join(' | '),c.fbBehaviors.join(' | ')]));
+  const csv=rows.map(r=>r.map(cell=>`"${String(cell).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8'}));
+  a.download='relojoaria-interesses-fb-ads.csv';a.click();showToast('✓ CSV exportado!');
+}
+function copyAllInterests(){
+  const sel=catalog.filter(c=>plannerSelected.has(c.id));
+  if(!sel.length){showToast('⚠️ Selecione ao menos um público');return}
+  const all=[...new Set(sel.flatMap(c=>c.fbInterests))];
+  copyText(all.join(', '),null);showToast(`✓ ${all.length} interesses copiados!`);
+}
+buildPlannerCheckboxes();updatePlanner();
+
+// ═══════════════════════════════════════════════════════════
 // NAVIGATION
-// ══════════════════════════════════════════════
-function showCatalogCat(idx) {
-  document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
-  ['search-panel','fbtable-panel','compare-panel','planner-panel'].forEach(id => document.getElementById(id).classList.remove('active'));
-  document.getElementById('catalog-view').style.display = '';
+// ═══════════════════════════════════════════════════════════
+function showCatalogCat(idx){
+  document.querySelectorAll('.tool-btn').forEach(b=>b.classList.remove('active'));
+  ['search-panel','fbtable-panel','compare-panel','planner-panel'].forEach(id=>document.getElementById(id).classList.remove('active'));
+  document.getElementById('catalog-view').style.display='';
   document.getElementById('catalog-search-bar').classList.add('visible');
-  document.querySelectorAll('.nav-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
-  document.querySelectorAll('.cat-section').forEach((s, i) => s.classList.toggle('active', i === idx));
-  activeTicketFilter = 'all';
-  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
+  document.querySelectorAll('.cat-section').forEach((s,i)=>s.classList.toggle('active',i===idx));
+  activeTicketFilter='all';
+  document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
   document.querySelector('.filter-chip[data-range="all"]')?.classList.add('active');
-  if (document.getElementById('catalog-search-input')) document.getElementById('catalog-search-input').value = '';
+  if(document.getElementById('catalog-search-input'))document.getElementById('catalog-search-input').value='';
   filterBrands();
-  window.scrollTo({top: document.getElementById('top-nav').offsetTop - 1, behavior:'smooth'});
+  window.scrollTo({top:document.getElementById('top-nav').offsetTop-1,behavior:'smooth'});
 }
-
-function showTool(tool) {
-  document.getElementById('catalog-view').style.display = 'none';
+function showTool(tool){
+  document.getElementById('catalog-view').style.display='none';
   document.getElementById('catalog-search-bar').classList.remove('visible');
-  ['search-panel','fbtable-panel','compare-panel','planner-panel'].forEach(id => document.getElementById(id).classList.remove('active'));
-  document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById(tool + '-panel').classList.add('active');
-  document.getElementById('btn-' + tool).classList.add('active');
-  if (tool === 'search') { setTimeout(() => document.getElementById('global-search-input').focus(), 100); globalSearch(); }
-  window.scrollTo({top: document.getElementById('top-nav').offsetTop - 1, behavior:'smooth'});
+  ['search-panel','fbtable-panel','compare-panel','planner-panel'].forEach(id=>document.getElementById(id).classList.remove('active'));
+  document.querySelectorAll('.tool-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(tool+'-panel').classList.add('active');
+  document.getElementById('btn-'+tool).classList.add('active');
+  if(tool==='search'){setTimeout(()=>document.getElementById('global-search-input').focus(),100);globalSearch()}
+  window.scrollTo({top:document.getElementById('top-nav').offsetTop-1,behavior:'smooth'});
 }
-
-// ══════════════════════════════════════════════
-// CAMPAIGN PLANNER
-// ══════════════════════════════════════════════
-let plannerSelected = new Set(['alta','luxo']);
-
-function buildPlannerCheckboxes() {
-  const container = document.getElementById('planner-checkboxes');
-  const prioMap = {high:['priority-high','🔥 Alta'],med:['priority-med','⚡ Média'],low:['priority-low','· Baixa']};
-  container.innerHTML = catalog.map(cat => {
-    const [cls, lbl] = prioMap[cat.fbPriority];
-    const checked = plannerSelected.has(cat.id);
-    return `<div class="planner-checkbox-row" onclick="togglePlannerCat('${cat.id}')">
-      <div class="planner-checkbox${checked?' checked':''}" id="chk-${cat.id}"></div>
-      <div class="planner-checkbox-info">
-        <div class="planner-checkbox-name">${cat.emoji} ${cat.name}</div>
-        <div class="planner-checkbox-sub">${cat.ticket}</div>
-      </div>
-      <span class="priority ${cls}" style="font-size:10px">${lbl}</span>
-    </div>`;
-  }).join('');
-}
-
-function togglePlannerCat(id) {
-  if (plannerSelected.has(id)) plannerSelected.delete(id);
-  else plannerSelected.add(id);
-  buildPlannerCheckboxes();
-  updatePlanner();
-}
-
-function updatePlanner() {
-  const budget = parseInt(document.getElementById('budget-range').value);
-  const days = parseInt(document.getElementById('days-range').value);
-  const audiences = parseInt(document.getElementById('audiences-range').value);
-  const objective = document.getElementById('objective-sel').value;
-
-  document.getElementById('budget-val').textContent = `R$ ${budget}/dia`;
-  document.getElementById('days-val').textContent = `${days} dias`;
-  document.getElementById('audiences-val').textContent = `${audiences} público${audiences>1?'s':''}`;
-
-  const total = budget * days;
-  const perPub = Math.round(budget / audiences);
-  const impressions = Math.round(total * 50); // ~R$0.02 CPM
-  const clicks = Math.round(total * 1);       // ~R$1 CPC avg luxury
-  const convRate = objective === 'messages' ? 0.03 : 0.015;
-  const convsMin = Math.round(clicks * convRate);
-  const convsMax = Math.round(clicks * convRate * 2);
-
-  document.getElementById('kpi-total').textContent = `R$ ${total.toLocaleString('pt-BR')}`;
-  document.getElementById('kpi-per-pub').textContent = `R$ ${perPub}/dia`;
-  document.getElementById('kpi-days').textContent = `${days} dias`;
-  document.getElementById('kpi-pubs').textContent = audiences;
-  document.getElementById('est-impressions').textContent = `~${impressions.toLocaleString('pt-BR')}`;
-  document.getElementById('est-clicks').textContent = `~${clicks.toLocaleString('pt-BR')}`;
-
-  const convLabel = objective === 'messages' ? 'Conversas WhatsApp' : objective === 'leads' ? 'Leads captados' : 'Engajamentos';
-  document.getElementById('est-convs').textContent = `~${convsMin}–${convsMax}`;
-
-  // Strategy text
-  const strategies = {
-    messages: `Recomendamos iniciar com <strong>${Math.min(audiences,2)} público${Math.min(audiences,2)>1?'s':''}</strong> de maior prioridade (Alta Relojoaria + Luxo Clássico). Rode por <strong>7 dias</strong>, analise CPR (custo por resultado), pause o público com pior desempenho e reforce o vencedor com o orçamento restante.`,
-    traffic: `Para tráfego, use público amplo com interesses de luxo geral + retargeting de visitantes. Orçamento sugerido: 70% em aquisição, 30% em retargeting. Duração mínima de 10 dias para o algoritmo otimizar.`,
-    leads: `Geração de leads funciona melhor com formulário nativo do Facebook. Use anúncio de imagem com produto + copy de urgência. Inclua campo de WhatsApp no formulário para qualificar o lead na sequência.`,
-    awareness: `Reconhecimento de marca: use formato de vídeo (15–30s) mostrando os relógios em ambiente de luxo. Meta: CPM baixo e frequência entre 3–5. Combine com tráfego quente após 7 dias de awareness.`
-  };
-  document.getElementById('planner-strategy-text').innerHTML = strategies[objective];
-
-  // Selected list
-  const sel = catalog.filter(c => plannerSelected.has(c.id));
-  const selList = document.getElementById('planner-selected-list');
-  if (!sel.length) { selList.innerHTML = '<span style="color:var(--muted)">Nenhum público selecionado acima.</span>'; return; }
-  selList.innerHTML = sel.map(c => `<div style="padding:4px 0;border-bottom:1px solid rgba(201,169,110,.06)"><span style="color:var(--gold-light)">${c.emoji} ${c.name}</span> <span style="color:var(--muted);font-size:11px">— ${c.ticket}</span></div>`).join('');
-}
-
-function exportCSV() {
-  const sel = catalog.filter(c => plannerSelected.has(c.id));
-  if (!sel.length) { showToast('⚠️ Selecione ao menos um público'); return; }
-  const rows = [['Categoria','Ticket','Prioridade','Interesses FB Ads','Comportamentos']];
-  sel.forEach(c => {
-    rows.push([c.name, c.ticket, c.fbPriority === 'high' ? 'Alta' : c.fbPriority === 'med' ? 'Média' : 'Baixa', c.fbInterests.join(' | '), c.fbBehaviors.join(' | ')]);
-  });
-  const csv = rows.map(r => r.map(cell => `"${String(cell).replace(/"/g,'""')}"`).join(',')).join('\n');
-  const blob = new Blob(['\uFEFF' + csv], {type:'text/csv;charset=utf-8'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'relojoaria-interesses-fb-ads.csv';
-  a.click();
-  showToast('✓ CSV exportado!');
-}
-
-function copyAllInterests() {
-  const sel = catalog.filter(c => plannerSelected.has(c.id));
-  if (!sel.length) { showToast('⚠️ Selecione ao menos um público'); return; }
-  const allInterests = [...new Set(sel.flatMap(c => c.fbInterests))];
-  copyText(allInterests.join(', '), null);
-  showToast(`✓ ${allInterests.length} interesses copiados!`);
-}
-
-buildPlannerCheckboxes();
-updatePlanner();
-
 showCatalogCat(0);
 </script>
 </body>
